@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotation\obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotation\obj\Debug\__library_projects__\SQLitePCL.Ext\library_project_imports\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotation\obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotation\obj\Debug\__library_projects__\SQLitePCL.Ext\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotation\obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotation\obj\Debug\__library_projects__\SQLitePCL.Ext.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>

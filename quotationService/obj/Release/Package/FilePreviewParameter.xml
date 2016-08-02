@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="mobile$quotation" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^d:\\Users\\anil\.gurbuz\\Desktop\\quotation_Xamarin_Android\\quotationService\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^d:\\Users\\anil\.gurbuz\\Desktop\\quotation_Xamarin_Android\\quotationService\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="MS_NotificationHubConnectionString-Web.config Connection String" description="" value="Endpoint=sb://[your namespace].servicebus.windows.net;SharedSecretIssuer=owner;SharedSecretValue=[your secret]" tags="">
+    <parameterEntry kind="XmlFile" scope="d:\\Users\\anil\.gurbuz\\Desktop\\quotation_Xamarin_Android\\quotationService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MS_NotificationHubConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="MS_TableConnectionString-Web.config Connection String" description="MS_TableConnectionString Connection String used in web.config by the application to access the database." value="Data Source=zpec7c1cpm.database.windows.net;Initial Catalog=Content_DB;User ID=wfZiIFYGUrLogin_quotation;Password=In76xV925011zZ$$;Asynchronous Processing=True;TrustServerCertificate=False;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="d:\\Users\\anil\.gurbuz\\Desktop\\quotation_Xamarin_Android\\quotationService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MS_TableConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
