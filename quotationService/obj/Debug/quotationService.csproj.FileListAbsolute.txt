@@ -131,3 +131,4 @@ d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotationService\bin\zh-H
 d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotationService\bin\zh-Hant\System.Spatial.resources.dll
 d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotationService\obj\Debug\quotationService.dll
 d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotationService\obj\Debug\quotationService.pdb
+d:\Users\anil.gurbuz\Desktop\quotation_Xamarin_Android\quotationService\obj\Debug\quotationService.csprojResolveAssemblyReference.cache

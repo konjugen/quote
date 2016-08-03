@@ -12,6 +12,7 @@ namespace quotationService.DataObjects
         public string WriterName { get; set; }
         public string Content { get; set; }
         public string FkCategoryId { get; set; }
+        public string CategoryName { get; set; }
         public bool IsDaily { get; set; }
     }
 }

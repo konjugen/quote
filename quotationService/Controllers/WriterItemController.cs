@@ -6,7 +6,7 @@ using System.Web.Http.OData;
 using Microsoft.WindowsAzure.Mobile.Service;
 using quotationService.DataObjects;
 using quotationService.Models;
-
+using System.Collections.Generic;
 
 namespace quotationService.Controllers
 {
@@ -38,10 +38,15 @@ namespace quotationService.Controllers
         }
 
         // POST tables/TodoItem
-        public async Task<IHttpActionResult> PostWriterItem(Writer item)
+        public async Task<IHttpActionResult> PostWriterItem(IEnumerable<Writer> items)
         {
-            Writer current = await InsertAsync(item);
-            return CreatedAtRoute("Tables", new { id = current.PkWriterId }, current);
+            foreach (var item in items)
+            {
+                await InsertAsync(item);
+            }
+            //Writer current = await InsertAsync(item);
+            //return CreatedAtRoute("Tables", new { id = current.PkWriterId }, current);
+            return Ok();
         }
 
         // DELETE tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959

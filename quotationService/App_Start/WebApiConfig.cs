@@ -26,27 +26,27 @@ namespace quotationService
             config.Formatters.JsonFormatter.SerializerSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Include;
             config.Formatters.JsonFormatter.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Include;
             
-            Database.SetInitializer(new quotationInitializer());
+            //Database.SetInitializer(new quotationInitializer());
         }
     }
 
     public class quotationInitializer : ClearDatabaseSchemaIfModelChanges<quotationContext>
     {
-        protected override void Seed(quotationContext context)
-        {
-            List<TodoItem> todoItems = new List<TodoItem>
-            {
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
-            };
+        //protected override void Seed(quotationContext context)
+        //{
+        //    List<TodoItem> todoItems = new List<TodoItem>
+        //    {
+        //        new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
+        //        new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
+        //    };
 
-            foreach (TodoItem todoItem in todoItems)
-            {
-                context.Set<TodoItem>().Add(todoItem);
-            }
+        //    foreach (TodoItem todoItem in todoItems)
+        //    {
+        //        context.Set<TodoItem>().Add(todoItem);
+        //    }
 
-            base.Seed(context);
-        }
+        //    base.Seed(context);
+        //}
     }
 }
 
