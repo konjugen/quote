@@ -20,6 +20,7 @@ namespace quotationService.Controllers
         }
 
         // GET tables/TodoItem
+        [EnableQuery(MaxTop = 1000)]
         public IQueryable<Writer> GetAllWriterItems()
         {
             return Query();

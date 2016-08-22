@@ -36,24 +36,23 @@ namespace quotation.Adapters
         {
             CategoryViewHolder ch = holder as CategoryViewHolder;
             ch.text.Text = items[position].CategoryName;
-            //holder.ItemView.Id = Convert.ToInt32(items[position].Id);
+            holder.ItemView.Id = Convert.ToInt32(items[position].PkCategoryId);
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.Row_List_Category, parent, false);
             CategoryViewHolder ch = new CategoryViewHolder(itemView);
-            //itemView.Click += ÝtemView_Click;
+            itemView.Click += ÝtemView_Click;
             return ch;
         }
-
-        //private void ÝtemView_Click(object sender, EventArgs e)
-        //{
-        //    Intent intent = new Intent(listViewCategory.Context, typeof(StoryActivity));
-        //    var id = ((View)sender).Id;
-        //    intent.PutExtra("selectedCategoryId", id.ToString());
-        //    listViewCategory.Context.StartActivity(intent);
-        //}
+        private void ÝtemView_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(listViewCategory.Context, typeof(WriterActivity));
+            var id = ((View)sender).Id;
+            intent.PutExtra("selectedCategoryId", id.ToString());
+            listViewCategory.Context.StartActivity(intent);
+        }
 
         public void Add(CategoryItem item)
         {

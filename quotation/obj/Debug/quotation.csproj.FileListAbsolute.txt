@@ -14,6 +14,7 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Primitive
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v4.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
@@ -26,8 +27,10 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.pdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\bin\quotation.quotation.apk
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\main_activity.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\row_list_category.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\contentcardview.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\writer_activity.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values\strings.xml
-d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\row_list_to_do.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\row_list_writer.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values\styles.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable-ldpi\ic_launcher.png
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable-mdpi\ic_launcher.png
@@ -68,6 +71,5 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Run
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.csprojResolveAssemblyReference.cache
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb

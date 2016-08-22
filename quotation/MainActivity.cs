@@ -76,11 +76,16 @@ namespace quotation
             //tab.SetIcon(Resource.Drawable.tab2_icon);
             tab.TabSelected += async (sender, args) =>
             {
-                await RefreshItemsFromTableAsync();
+                await RefreshAuthorItemsFromTableAsync();
             };
             ActionBar.AddTab(tab);
 
             await RefreshItemsFromTableAsync();
+        }
+
+        private Task RefreshAuthorItemsFromTableAsync()
+        {
+            throw new NotImplementedException();
         }
 
         async Task RefreshItemsFromTableAsync()
@@ -114,6 +119,5 @@ namespace quotation
             builder.SetTitle(title);
             builder.Create().Show();
         }
-
     }
 }

@@ -15,16 +15,16 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f070000;
-        public static final int buttonAddToDo=0x7f070003;
-        public static final int checkToDoItem=0x7f070005;
-        public static final int listViewToDo=0x7f070004;
-        public static final int menu_refresh=0x7f070006;
-        public static final int textNewToDo=0x7f070002;
-        public static final int textViewTitle=0x7f070001;
+        public static final int categoryLayout=0x7f070002;
+        public static final int categoryText=0x7f070003;
+        public static final int checkToDoItem=0x7f070004;
+        public static final int listViewCategory=0x7f070001;
+        public static final int menu_refresh=0x7f070005;
     }
     public static final class layout {
-        public static final int activity_to_do=0x7f030000;
-        public static final int row_list_to_do=0x7f030001;
+        public static final int main_activity=0x7f030000;
+        public static final int row_list_category=0x7f030001;
+        public static final int row_list_to_do=0x7f030002;
     }
     public static final class menu {
         public static final int activity_main=0x7f060000;
@@ -33,6 +33,8 @@ public final class R {
         public static final int add_button_text=0x7f040002;
         public static final int add_textbox_hint=0x7f040001;
         public static final int app_name=0x7f040000;
+        public static final int author_tab_text=0x7f040007;
+        public static final int category_tab_text=0x7f040006;
         public static final int checkbox_text=0x7f040005;
         public static final int menu_refresh=0x7f040004;
         public static final int mobile_services=0x7f040003;
