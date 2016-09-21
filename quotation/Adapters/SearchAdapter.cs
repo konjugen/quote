@@ -45,10 +45,10 @@ namespace quotation.Adapters
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
 
-            convertView = View.Inflate(context, Resource.Layout.Main_Activity, null);
+            convertView = View.Inflate(context, Resource.Layout.AutoComplateSearch, null);
             var text = convertView.FindViewById<TextView>(Resource.Id.txt_view);
 
-            text.Text = items[position].ToString();
+            text.Text = items[position];
 
             return convertView;
         }

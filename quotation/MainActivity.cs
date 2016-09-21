@@ -37,6 +37,8 @@ namespace quotation
 
         string[] language = { "C", "C++", "Java", ".NET", "iPhone", "Android", "ASP.NET", "PHP" };
 
+        string[] categoryItemArrayList;
+
         protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -57,14 +59,7 @@ namespace quotation
 
             searchAdapter = new SearchAdapter(this);
 
-            searchAdapter.OriginalItems = language;
-
-            var disp = WindowManager.DefaultDisplay;
-
-            var widht = disp.Width;
-            actv.DropDownWidth = widht;
-
-            actv.Adapter = searchAdapter;
+           
 
 
             adapter = new CategoryItemAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewCategory));
@@ -126,6 +121,15 @@ namespace quotation
             {
                 // Get the items that weren't marked as completed and add them in the adapter
                 categoryItemList = await categoryTable.Where(item => item.CategoryName != null).OrderBy(x => x.CategoryName).ToListAsync();
+
+                searchAdapter.OriginalItems = categoryItemList.Select(s => s.CategoryName).ToArray();
+
+                var disp = WindowManager.DefaultDisplay;
+
+                var widht = disp.Width;
+                actv.DropDownWidth = widht;
+
+                actv.Adapter = searchAdapter;
                 adapter.Clear();
 
                 foreach (CategoryItem current in categoryItemList)
