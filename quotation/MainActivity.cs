@@ -29,8 +29,13 @@ namespace quotation
 
         //private CategoryAdapter adapter;
         private CategoryItemAdapter adapter;
+        private SearchAdapter searchAdapter;
+
+        private AutoCompleteTextView actv;
 
         private RecyclerView listViewCategory;
+
+        string[] language = { "C", "C++", "Java", ".NET", "iPhone", "Android", "ASP.NET", "PHP" };
 
         protected override async void OnCreate(Bundle bundle)
         {
@@ -45,6 +50,22 @@ namespace quotation
             //listViewCategory = FindViewById<ListView>(Resource.Id.listViewCategory);
 
             //listViewCategory.Adapter = adapter;
+
+            actv = (AutoCompleteTextView)FindViewById(Resource.Id.autocomplete_search);
+
+            actv.Threshold = 1;
+
+            searchAdapter = new SearchAdapter(this);
+
+            searchAdapter.OriginalItems = language;
+
+            var disp = WindowManager.DefaultDisplay;
+
+            var widht = disp.Width;
+            actv.DropDownWidth = widht;
+
+            actv.Adapter = searchAdapter;
+
 
             adapter = new CategoryItemAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewCategory));
 
@@ -65,9 +86,9 @@ namespace quotation
             var tab = ActionBar.NewTab();
             tab.SetText(Resources.GetString(Resource.String.category_tab_text));
             //tab.SetIcon(Resource.Drawable.tab1_icon);
-            tab.TabSelected += (sender, args) =>
+            tab.TabSelected += async (sender, args) =>
             {
-
+                await RefreshItemsFromTableAsync();
             };
             ActionBar.AddTab(tab);
 
@@ -79,13 +100,23 @@ namespace quotation
                 await RefreshAuthorItemsFromTableAsync();
             };
             ActionBar.AddTab(tab);
-
-            await RefreshItemsFromTableAsync();
         }
 
-        private Task RefreshAuthorItemsFromTableAsync()
+        async Task RefreshAuthorItemsFromTableAsync()
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Get the items that weren't marked as completed and add them in the adapter
+                categoryItemList = await categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
+                adapter.Clear();
+
+                foreach (CategoryItem current in categoryItemList)
+                    adapter.Add(current);
+            }
+            catch (Exception e)
+            {
+                CreateAndShowDialog(e, "Error");
+            }
         }
 
         async Task RefreshItemsFromTableAsync()

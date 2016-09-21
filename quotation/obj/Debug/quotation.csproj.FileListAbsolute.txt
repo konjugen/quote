@@ -7,11 +7,15 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mo
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Newtonsoft.Json.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.CurrentActivity.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.Abstractions.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\SQLitePCL.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\SQLitePCL.Ext.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Extensions.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Primitives.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.CustomTabs.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v4.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
@@ -19,9 +23,17 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.CurrentActivity.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.pdb
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.dll.mdb
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.Abstractions.pdb
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.Abstractions.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.Abstractions.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Newtonsoft.Json.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Extensions.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Primitives.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.csprojResolveAssemblyReference.cache
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.pdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\bin\quotation.quotation.apk
@@ -39,6 +51,7 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable-hdpi\ic_laun
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\menu\activity_main.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values-v11\styles.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values-v14\styles.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable\share.png
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\R.cs.flag
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\uploadflags.txt
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb
@@ -62,6 +75,8 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Mono.Andro
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Mono.Android.Export.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Mono.CSharp.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\mscorlib.dll.mdb
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Plugin.Share.Abstractions.dll.mdb
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Plugin.Share.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Core.dll.mdb
@@ -71,5 +86,6 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Run
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\autocomplatesearch.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb

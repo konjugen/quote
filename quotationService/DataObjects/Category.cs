@@ -11,5 +11,6 @@ namespace quotationService.DataObjects
         public int PkCategoryId { get; set; }
         public string CategoryName { get; set; }
         public bool IsDaily { get; set; }
+        public string WriterName { get; set; }
     }
 }

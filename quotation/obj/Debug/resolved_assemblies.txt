@@ -11,11 +11,15 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Microsoft.
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Microsoft.WindowsAzure.Mobile.Ext.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Microsoft.WindowsAzure.Mobile.SQLiteStore.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Newtonsoft.Json.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Plugin.CurrentActivity.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Plugin.Share.Abstractions.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Plugin.Share.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\SQLitePCL.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\SQLitePCL.Ext.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Net.Http.Extensions.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Net.Http.Primitives.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Xamarin.Android.Support.CustomTabs.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Xamarin.Android.Support.v4.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Xamarin.Android.Support.v7.AppCompat.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Xamarin.Android.Support.v7.CardView.dll

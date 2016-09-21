@@ -35,7 +35,10 @@ namespace quotation.Adapters
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             CategoryViewHolder ch = holder as CategoryViewHolder;
-            ch.text.Text = items[position].CategoryName;
+            if(items[position].CategoryName != null)
+                ch.text.Text = items[position].CategoryName;
+            else
+                ch.text.Text = items[position].WriterName;
             holder.ItemView.Id = Convert.ToInt32(items[position].PkCategoryId);
         }
 

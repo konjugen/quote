@@ -39,11 +39,11 @@ namespace quotationService.Controllers
         }
 
         // POST tables/TodoItem
-        public IHttpActionResult PostWriterItem(IEnumerable<Writer> items)
+        public async Task<IHttpActionResult> PostWriterItem(IEnumerable<Writer> items)
         {
             foreach (var item in items)
             {
-                InsertAsync(item);
+                await InsertAsync(item);
             }
             //Writer current = await InsertAsync(item);
             //return CreatedAtRoute("Tables", new { id = current.PkWriterId }, current);

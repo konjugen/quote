@@ -17,5 +17,6 @@ namespace quotation.DTO
         public string Id { get; set; }
         public int PkCategoryId { get; set; }
         public string CategoryName { get; set; }
+        public string WriterName { get; set; }
     }
 }

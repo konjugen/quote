@@ -39,6 +39,7 @@ namespace quotation.Adapters
             ch.contentText.Text = items[position].Content;
             ch.writerText.Text = items[position].WriterName;
             holder.ItemView.Id = Convert.ToInt32(items[position].FkCategoryId);
+            holder.ItemView.Tag = items[position].Id;
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -50,12 +51,19 @@ namespace quotation.Adapters
         }
         private void ÝtemView_Click(object sender, EventArgs e)
         {
-            //Intent intent = new Intent(listViewWriter.Context, typeof(StoryActivity));
-            //var id = ((View)sender).Id;
-            //intent.PutExtra("selectedCategoryId", id.ToString());
-            //listViewCategory.Context.StartActivity(intent);
+            var intent = new Intent(Intent.ActionSend);
+            var id = ((View)sender).Tag.ToString();
+            var itemText = items.Where(x => x.Id == id).FirstOrDefault();
+            intent.SetType("text/plain");
+            intent.PutExtra(Intent.ExtraText, "“" + itemText.Content + "”" + " -" + itemText.WriterName);
+                      
+            intent.SetFlags(ActivityFlags.ClearTop);
+            intent.SetFlags(ActivityFlags.NewTask);
+            var chooserIntent = Intent.CreateChooser(intent, "Paylaþ");
+            chooserIntent.SetFlags(ActivityFlags.ClearTop);
+            chooserIntent.SetFlags(ActivityFlags.NewTask);
+            Application.Context.StartActivity(chooserIntent);
         }
-
         public void Add(WriterItem item)
         {
             items.Add(item);

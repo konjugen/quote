@@ -263,6 +263,6 @@ d:\Users\anil.gurbuz\Desktop\quote\quotationService\bin\ko\System.Spatial.resour
 d:\Users\anil.gurbuz\Desktop\quote\quotationService\bin\ru\System.Spatial.resources.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotationService\bin\zh-Hans\System.Spatial.resources.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotationService\bin\zh-Hant\System.Spatial.resources.dll
-d:\Users\anil.gurbuz\Desktop\quote\quotationService\obj\Debug\quotationService.csprojResolveAssemblyReference.cache
 d:\Users\anil.gurbuz\Desktop\quote\quotationService\obj\Debug\quotationService.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotationService\obj\Debug\quotationService.pdb
+d:\Users\anil.gurbuz\Desktop\quote\quotationService\obj\Debug\quotationService.csprojResolveAssemblyReference.cache
