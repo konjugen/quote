@@ -39,7 +39,7 @@ namespace quotation
 
         string[] categoryItemArrayList;
 
-        protected override async void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
@@ -53,14 +53,9 @@ namespace quotation
 
             //listViewCategory.Adapter = adapter;
 
-            actv = (AutoCompleteTextView)FindViewById(Resource.Id.autocomplete_search);
+            actv = (AutoCompleteTextView)FindViewById(Resource.Id.category_autocomplete_search);
 
             actv.Threshold = 1;
-
-            searchAdapter = new SearchAdapter(this);
-
-           
-
 
             adapter = new CategoryItemAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewCategory));
 
@@ -107,6 +102,16 @@ namespace quotation
 
                 foreach (CategoryItem current in categoryItemList)
                     adapter.Add(current);
+
+                searchAdapter = new SearchAdapter(this);
+
+                searchAdapter.OriginalItems = categoryItemList.Select(s => s.WriterName).ToArray();
+                var disp = WindowManager.DefaultDisplay;
+                var widht = disp.Width;
+                actv.DropDownWidth = widht;
+                actv.Adapter = searchAdapter;
+
+                actv.ItemClick += actv_ItemClick;
             }
             catch (Exception e)
             {
@@ -121,24 +126,33 @@ namespace quotation
             {
                 // Get the items that weren't marked as completed and add them in the adapter
                 categoryItemList = await categoryTable.Where(item => item.CategoryName != null).OrderBy(x => x.CategoryName).ToListAsync();
-
-                searchAdapter.OriginalItems = categoryItemList.Select(s => s.CategoryName).ToArray();
-
-                var disp = WindowManager.DefaultDisplay;
-
-                var widht = disp.Width;
-                actv.DropDownWidth = widht;
-
-                actv.Adapter = searchAdapter;
                 adapter.Clear();
 
                 foreach (CategoryItem current in categoryItemList)
                     adapter.Add(current);
+
+                searchAdapter = new SearchAdapter(this);
+
+                searchAdapter.OriginalItems = categoryItemList.Select(s => s.CategoryName).ToArray();
+                var disp = WindowManager.DefaultDisplay;
+                var widht = disp.Width;
+                actv.DropDownWidth = widht;
+                actv.Adapter = searchAdapter;
+
+                actv.ItemClick += actv_ItemClick;               
             }
             catch (Exception e)
             {
                 CreateAndShowDialog(e, "Error");
             }
+        }
+
+        private void actv_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            Intent intent = new Intent(listViewCategory.Context, typeof(WriterActivity));
+            //var id = ((View)sender).Id;
+            intent.PutExtra("selectedCategoryId", (e.Position + 1).ToString());
+            listViewCategory.Context.StartActivity(intent);
         }
 
         void CreateAndShowDialog(Exception exception, String title)

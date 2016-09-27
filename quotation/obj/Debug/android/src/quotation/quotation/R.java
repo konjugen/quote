@@ -1779,12 +1779,13 @@ containing a value of this type.
         public static final int always=0x7f06001d;
         public static final int authorLayout=0x7f060067;
         public static final int authorText=0x7f060068;
-        public static final int autocomplete_search=0x7f060056;
+        public static final int author_autocomplete_search=0x7f060069;
         public static final int beginning=0x7f06001a;
         public static final int buttonPanel=0x7f06002c;
         public static final int cancel_action=0x7f060059;
         public static final int categoryLayout=0x7f060065;
         public static final int categoryText=0x7f060066;
+        public static final int category_autocomplete_search=0x7f060056;
         public static final int checkbox=0x7f06003a;
         public static final int chronometer=0x7f06005f;
         public static final int collapseActionView=0x7f06001e;
@@ -1811,10 +1812,10 @@ containing a value of this type.
         public static final int line3=0x7f060061;
         public static final int listMode=0x7f06000a;
         public static final int listViewCategory=0x7f060057;
-        public static final int listViewWriter=0x7f060069;
+        public static final int listViewWriter=0x7f06006a;
         public static final int list_item=0x7f060029;
         public static final int media_actions=0x7f06005b;
-        public static final int menu_refresh=0x7f06006a;
+        public static final int menu_refresh=0x7f06006b;
         public static final int middle=0x7f06001c;
         public static final int multiply=0x7f060015;
         public static final int never=0x7f060020;

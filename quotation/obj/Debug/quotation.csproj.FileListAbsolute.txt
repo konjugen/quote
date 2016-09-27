@@ -33,7 +33,6 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Plugin.Share.Abstractions
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Newtonsoft.Json.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Extensions.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Primitives.xml
-d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.csprojResolveAssemblyReference.cache
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.pdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\bin\quotation.quotation.apk
@@ -41,6 +40,7 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\main_activity.
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\row_list_category.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\contentcardview.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\writer_activity.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\autocomplatesearch.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values\strings.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\row_list_writer.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values\styles.xml
@@ -86,6 +86,5 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Run
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\autocomplatesearch.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb

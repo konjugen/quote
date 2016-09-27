@@ -31,6 +31,10 @@ namespace quotation
 
         private RecyclerView listViewWriter;
 
+        private AutoCompleteTextView actv;
+
+        private SearchAdapter searchAdapter;
+
         public string selectedItem;
         protected override async void OnCreate(Bundle bundle)
         {
@@ -39,6 +43,12 @@ namespace quotation
             selectedItem = Intent.Extras.GetString("selectedCategoryId");
 
             SetContentView(Resource.Layout.Writer_Activity);
+
+            actv = (AutoCompleteTextView)FindViewById(Resource.Id.author_autocomplete_search);
+
+            actv.Threshold = 1;
+
+            searchAdapter = new SearchAdapter(this);
 
             adapter = new WriterItemAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewWriter));
 
@@ -92,11 +102,24 @@ namespace quotation
 
                 foreach (WriterItem current in writerItemList)
                     adapter.Add(current);
+
+                searchAdapter.OriginalItems = writerItemList.Select(s => s.WriterName).ToArray();
+                var disp = WindowManager.DefaultDisplay;
+                var widht = disp.Width;
+                actv.DropDownWidth = widht;
+                actv.Adapter = searchAdapter;
+
+                actv.ItemClick += actv_ItemClick;
             }
             catch (Exception e)
             {
                 CreateAndShowDialog(e, "Error");
             }
+        }
+
+        private void actv_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         void CreateAndShowDialog(Exception exception, String title)

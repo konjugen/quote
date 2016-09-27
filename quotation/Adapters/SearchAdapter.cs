@@ -119,7 +119,7 @@ namespace quotation.Adapters
                 this.SAdapter.NotifyDataSetInvalidated();
             else
             {
-                SAdapter.OriginalItems = (string[])results.Values;
+                SAdapter.OriginalItems = ((string[])results.Values).Where(q => !string.IsNullOrEmpty(q)).ToArray();
                 SAdapter.NotifyDataSetChanged();
             }
         }

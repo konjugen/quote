@@ -1597,8 +1597,8 @@ namespace quotation
 			// aapt resource value: 0x7f060068
 			public const int authorText = 2131099752;
 			
-			// aapt resource value: 0x7f060056
-			public const int autocomplete_search = 2131099734;
+			// aapt resource value: 0x7f060069
+			public const int author_autocomplete_search = 2131099753;
 			
 			// aapt resource value: 0x7f06001a
 			public const int beginning = 2131099674;
@@ -1614,6 +1614,9 @@ namespace quotation
 			
 			// aapt resource value: 0x7f060066
 			public const int categoryText = 2131099750;
+			
+			// aapt resource value: 0x7f060056
+			public const int category_autocomplete_search = 2131099734;
 			
 			// aapt resource value: 0x7f06003a
 			public const int checkbox = 2131099706;
@@ -1693,8 +1696,8 @@ namespace quotation
 			// aapt resource value: 0x7f060057
 			public const int listViewCategory = 2131099735;
 			
-			// aapt resource value: 0x7f060069
-			public const int listViewWriter = 2131099753;
+			// aapt resource value: 0x7f06006a
+			public const int listViewWriter = 2131099754;
 			
 			// aapt resource value: 0x7f060029
 			public const int list_item = 2131099689;
@@ -1702,8 +1705,8 @@ namespace quotation
 			// aapt resource value: 0x7f06005b
 			public const int media_actions = 2131099739;
 			
-			// aapt resource value: 0x7f06006a
-			public const int menu_refresh = 2131099754;
+			// aapt resource value: 0x7f06006b
+			public const int menu_refresh = 2131099755;
 			
 			// aapt resource value: 0x7f06001c
 			public const int middle = 2131099676;
