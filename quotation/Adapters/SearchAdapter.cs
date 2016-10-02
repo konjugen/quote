@@ -49,6 +49,7 @@ namespace quotation.Adapters
             var text = convertView.FindViewById<TextView>(Resource.Id.txt_view);
 
             text.Text = items[position];
+            convertView.Tag = items[position];
 
             return convertView;
         }

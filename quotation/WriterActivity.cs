@@ -97,19 +97,21 @@ namespace quotation
             try
             {
                 // Get the items that weren't marked as completed and add them in the adapter
-                writerItemList = await writerTable.Where(item => item.FkCategoryId == selectedItem).OrderBy(x => x.WriterName).ToListAsync();
+                writerItemList = await writerTable.Where(item => item.CategoryName == selectedItem).OrderBy(x => x.WriterName).ToListAsync();
+                if(writerItemList.Count == 0)
+                    writerItemList = await writerTable.Where(item => item.WriterName == selectedItem).OrderBy(x => x.WriterName).ToListAsync();
                 adapter.Clear();
 
                 foreach (WriterItem current in writerItemList)
                     adapter.Add(current);
 
-                searchAdapter.OriginalItems = writerItemList.Select(s => s.WriterName).ToArray();
-                var disp = WindowManager.DefaultDisplay;
-                var widht = disp.Width;
-                actv.DropDownWidth = widht;
-                actv.Adapter = searchAdapter;
+                //searchAdapter.OriginalItems = writerItemList.Select(s => s.WriterName).ToArray();
+                //var disp = WindowManager.DefaultDisplay;
+                //var widht = disp.Width;
+                //actv.DropDownWidth = widht;
+                //actv.Adapter = searchAdapter;
 
-                actv.ItemClick += actv_ItemClick;
+                //actv.ItemClick += actv_ItemClick;
             }
             catch (Exception e)
             {
@@ -117,10 +119,10 @@ namespace quotation
             }
         }
 
-        private void actv_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        //private void actv_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         void CreateAndShowDialog(Exception exception, String title)
         {

@@ -35,6 +35,8 @@ namespace quotation
 
         private RecyclerView listViewCategory;
 
+        ActionBar.Tab tab;
+
         string[] language = { "C", "C++", "Java", ".NET", "iPhone", "Android", "ASP.NET", "PHP" };
 
         string[] categoryItemArrayList;
@@ -57,6 +59,13 @@ namespace quotation
 
             actv.Threshold = 1;
 
+            var disp = WindowManager.DefaultDisplay;
+            var widht = disp.Width;
+            actv.DropDownWidth = widht;
+            
+
+            actv.ItemClick += actv_ItemClick;
+
             adapter = new CategoryItemAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewCategory));
 
             listViewCategory = (RecyclerView)FindViewById(Resource.Id.listViewCategory);
@@ -73,7 +82,7 @@ namespace quotation
 
             categoryTable = client.GetTable<CategoryItem>();
 
-            var tab = ActionBar.NewTab();
+            tab = ActionBar.NewTab();
             tab.SetText(Resources.GetString(Resource.String.category_tab_text));
             //tab.SetIcon(Resource.Drawable.tab1_icon);
             tab.TabSelected += async (sender, args) =>
@@ -87,37 +96,37 @@ namespace quotation
             //tab.SetIcon(Resource.Drawable.tab2_icon);
             tab.TabSelected += async (sender, args) =>
             {
-                await RefreshAuthorItemsFromTableAsync();
+                await RefreshItemsFromTableAsync();
             };
             ActionBar.AddTab(tab);
         }
 
-        async Task RefreshAuthorItemsFromTableAsync()
-        {
-            try
-            {
-                // Get the items that weren't marked as completed and add them in the adapter
-                categoryItemList = await categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
-                adapter.Clear();
+        //async Task RefreshAuthorItemsFromTableAsync()
+        //{
+        //    try
+        //    {
+        //        // Get the items that weren't marked as completed and add them in the adapter
+        //        categoryItemList = await categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
+        //        adapter.Clear();
 
-                foreach (CategoryItem current in categoryItemList)
-                    adapter.Add(current);
+        //        foreach (CategoryItem current in categoryItemList)
+        //            adapter.Add(current);
 
-                searchAdapter = new SearchAdapter(this);
+        //        searchAdapter = new SearchAdapter(this);
 
-                searchAdapter.OriginalItems = categoryItemList.Select(s => s.WriterName).ToArray();
-                var disp = WindowManager.DefaultDisplay;
-                var widht = disp.Width;
-                actv.DropDownWidth = widht;
-                actv.Adapter = searchAdapter;
+        //        searchAdapter.OriginalItems = categoryItemList.Select(s => s.WriterName).ToArray();
+        //        var disp = WindowManager.DefaultDisplay;
+        //        var widht = disp.Width;
+        //        actv.DropDownWidth = widht;
+        //        actv.Adapter = searchAdapter;
 
-                actv.ItemClick += actv_ItemClick;
-            }
-            catch (Exception e)
-            {
-                CreateAndShowDialog(e, "Error");
-            }
-        }
+        //        actv.ItemClick += actv_ItemClick;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        CreateAndShowDialog(e, "Error");
+        //    }
+        //}
 
         async Task RefreshItemsFromTableAsync()
         {
@@ -125,21 +134,24 @@ namespace quotation
             try
             {
                 // Get the items that weren't marked as completed and add them in the adapter
-                categoryItemList = await categoryTable.Where(item => item.CategoryName != null).OrderBy(x => x.CategoryName).ToListAsync();
+                searchAdapter = new SearchAdapter(this);
+                if (tab.Text == "Author")
+                {
+                    categoryItemList = await categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
+                    searchAdapter.OriginalItems = categoryItemList.Select(s => s.WriterName).ToArray();
+                    actv.Adapter = searchAdapter;
+                }                   
+                else
+                {
+                    categoryItemList = await categoryTable.Where(item => item.CategoryName != null).OrderBy(x => x.CategoryName).ToListAsync();
+                    searchAdapter.OriginalItems = categoryItemList.Select(s => s.CategoryName).ToArray();
+                    actv.Adapter = searchAdapter;
+                }
+                    
                 adapter.Clear();
 
                 foreach (CategoryItem current in categoryItemList)
-                    adapter.Add(current);
-
-                searchAdapter = new SearchAdapter(this);
-
-                searchAdapter.OriginalItems = categoryItemList.Select(s => s.CategoryName).ToArray();
-                var disp = WindowManager.DefaultDisplay;
-                var widht = disp.Width;
-                actv.DropDownWidth = widht;
-                actv.Adapter = searchAdapter;
-
-                actv.ItemClick += actv_ItemClick;               
+                    adapter.Add(current);                                 
             }
             catch (Exception e)
             {
@@ -151,7 +163,7 @@ namespace quotation
         {
             Intent intent = new Intent(listViewCategory.Context, typeof(WriterActivity));
             //var id = ((View)sender).Id;
-            intent.PutExtra("selectedCategoryId", (e.Position + 1).ToString());
+            intent.PutExtra("selectedCategoryId", e.View.Tag.ToString());
             listViewCategory.Context.StartActivity(intent);
         }
 

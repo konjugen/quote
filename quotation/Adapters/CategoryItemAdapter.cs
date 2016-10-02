@@ -35,10 +35,16 @@ namespace quotation.Adapters
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             CategoryViewHolder ch = holder as CategoryViewHolder;
-            if(items[position].CategoryName != null)
+            if (items[position].CategoryName != null)
+            {
                 ch.text.Text = items[position].CategoryName;
+                ch.ItemView.Tag = items[position].CategoryName;
+            }
             else
+            {
                 ch.text.Text = items[position].WriterName;
+                ch.ItemView.Tag = items[position].WriterName;
+            }               
             holder.ItemView.Id = Convert.ToInt32(items[position].PkCategoryId);
         }
 
@@ -52,7 +58,7 @@ namespace quotation.Adapters
         private void ÝtemView_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(listViewCategory.Context, typeof(WriterActivity));
-            var id = ((View)sender).Id;
+            var id = ((View)sender).Tag;
             intent.PutExtra("selectedCategoryId", id.ToString());
             listViewCategory.Context.StartActivity(intent);
         }

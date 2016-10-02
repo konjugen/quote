@@ -126,6 +126,7 @@
     <Compile Include="Adapters\SearchAdapter.cs" />
     <Compile Include="Adapters\WriterItemAdapter.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DTO\SearchItem.cs" />
     <Compile Include="DTO\WriterItem.cs" />
     <Compile Include="DTO\CategoryItem.cs" />
     <Compile Include="Holders\CategoryViewHolder.cs" />
