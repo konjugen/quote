@@ -35,16 +35,21 @@ namespace quotation.Adapters
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             CategoryViewHolder ch = holder as CategoryViewHolder;
-            if (items[position].CategoryName != null)
-            {
-                ch.text.Text = items[position].CategoryName;
-                ch.ItemView.Tag = items[position].CategoryName;
-            }
-            else
-            {
-                ch.text.Text = items[position].WriterName;
-                ch.ItemView.Tag = items[position].WriterName;
-            }               
+            //if (items[position].CategoryName != null)
+            //{
+            //    ch.text.Text = items[position].CategoryName;
+            //    ch.ItemView.Tag = items[position].CategoryName;
+            ch.text.Text = items[position].CategoryName;
+            ch.ItemView.Tag = items[position].CategoryName;
+            //else
+            //{
+            //    //ch.text.Text = items[position].WriterName;
+            //    //ch.ItemView.Tag = items[position].WriterName;
+            //    var text = items.Where(q => q.IsDaily).ToList();
+            //    ch.text.Text = text[0].WriterName;
+            //    ch.ItemView.Tag = text[0].WriterName;
+
+            //}
             holder.ItemView.Id = Convert.ToInt32(items[position].PkCategoryId);
         }
 

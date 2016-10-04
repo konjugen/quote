@@ -87,5 +87,6 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Ser
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.csprojResolveAssemblyReference.cache
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\daily_activity.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb

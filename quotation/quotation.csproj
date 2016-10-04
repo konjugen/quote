@@ -123,9 +123,11 @@
   <ItemGroup>
     <Compile Include="Adapters\CategoryAdapter.cs" />
     <Compile Include="Adapters\CategoryItemAdapter.cs" />
+    <Compile Include="Adapters\DailyAdapter.cs" />
     <Compile Include="Adapters\SearchAdapter.cs" />
     <Compile Include="Adapters\WriterItemAdapter.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DailyActivity.cs" />
     <Compile Include="DTO\SearchItem.cs" />
     <Compile Include="DTO\WriterItem.cs" />
     <Compile Include="DTO\CategoryItem.cs" />
@@ -157,6 +159,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\AutoComplateSearch.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Daily_Activity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

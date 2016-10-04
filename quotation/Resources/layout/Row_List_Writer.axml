@@ -3,18 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="1dp"
-    android:id="@+id/authorLayout">
-    <TextView
-        android:text="@string/checkbox_text"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="20sp"
-        android:id="@+id/authorText"
-        android:gravity="center" />
-  </LinearLayout>
+        android:layout_height="wrap_content"
+        android:paddingBottom="1dp"
+        android:id="@+id/authorLayout">
+        <TextView
+            android:text="@string/checkbox_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:id="@+id/authorText"
+            android:gravity="left" />
+    </LinearLayout>
 </LinearLayout>

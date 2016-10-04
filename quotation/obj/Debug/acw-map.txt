@@ -1,3 +1,7 @@
+quotation.DailyActivity, quotation;md5905b39261ce1e271f13ef34e4d812a7c.DailyActivity
+quotation.DailyActivity, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5905b39261ce1e271f13ef34e4d812a7c.DailyActivity
+quotation.DailyActivity;md5905b39261ce1e271f13ef34e4d812a7c.DailyActivity
+quotation.DailyActivity;md5905b39261ce1e271f13ef34e4d812a7c.DailyActivity
 quotation.MainActivity, quotation;md5905b39261ce1e271f13ef34e4d812a7c.MainActivity
 quotation.MainActivity, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5905b39261ce1e271f13ef34e4d812a7c.MainActivity
 quotation.MainActivity;md5905b39261ce1e271f13ef34e4d812a7c.MainActivity
@@ -26,6 +30,10 @@ quotation.Adapters.CategoryItemAdapter, quotation;md5b6c11488fbfd5810396a4e28147
 quotation.Adapters.CategoryItemAdapter, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5b6c11488fbfd5810396a4e2814746856.CategoryItemAdapter
 quotation.Adapters.CategoryItemAdapter;md5b6c11488fbfd5810396a4e2814746856.CategoryItemAdapter
 quotation.adapters.CategoryItemAdapter;md5b6c11488fbfd5810396a4e2814746856.CategoryItemAdapter
+quotation.Adapters.DailyAdapter, quotation;md5b6c11488fbfd5810396a4e2814746856.DailyAdapter
+quotation.Adapters.DailyAdapter, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5b6c11488fbfd5810396a4e2814746856.DailyAdapter
+quotation.Adapters.DailyAdapter;md5b6c11488fbfd5810396a4e2814746856.DailyAdapter
+quotation.adapters.DailyAdapter;md5b6c11488fbfd5810396a4e2814746856.DailyAdapter
 quotation.Adapters.SearchAdapter, quotation;md5b6c11488fbfd5810396a4e2814746856.SearchAdapter
 quotation.Adapters.SearchAdapter, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5b6c11488fbfd5810396a4e2814746856.SearchAdapter
 quotation.Adapters.SearchAdapter;md5b6c11488fbfd5810396a4e2814746856.SearchAdapter

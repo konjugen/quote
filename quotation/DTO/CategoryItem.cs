@@ -18,5 +18,6 @@ namespace quotation.DTO
         public int PkCategoryId { get; set; }
         public string CategoryName { get; set; }
         public string WriterName { get; set; }
+        public bool IsDaily { get; set; }
     }
 }

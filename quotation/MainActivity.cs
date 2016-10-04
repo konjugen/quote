@@ -22,7 +22,7 @@ namespace quotation
                Theme = "@style/AppTheme")]
     public class MainActivity : Activity
     {
-        private MobileServiceClient client;	
+        private MobileServiceClient client;
         private IMobileServiceTable<CategoryItem> categoryTable;
 
         public List<CategoryItem> categoryItemList = new List<CategoryItem>();
@@ -37,9 +37,7 @@ namespace quotation
 
         ActionBar.Tab tab;
 
-        string[] language = { "C", "C++", "Java", ".NET", "iPhone", "Android", "ASP.NET", "PHP" };
-
-        string[] categoryItemArrayList;
+        Button dailyButton;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -53,7 +51,7 @@ namespace quotation
 
             //listViewCategory = FindViewById<ListView>(Resource.Id.listViewCategory);
 
-            //listViewCategory.Adapter = adapter;
+            //listViewCategory.Adapter = adapter;      
 
             actv = (AutoCompleteTextView)FindViewById(Resource.Id.category_autocomplete_search);
 
@@ -62,7 +60,6 @@ namespace quotation
             var disp = WindowManager.DefaultDisplay;
             var widht = disp.Width;
             actv.DropDownWidth = widht;
-            
 
             actv.ItemClick += actv_ItemClick;
 
@@ -87,6 +84,7 @@ namespace quotation
             //tab.SetIcon(Resource.Drawable.tab1_icon);
             tab.TabSelected += async (sender, args) =>
             {
+                tab.SetText(Resources.GetString(Resource.String.category_tab_text));
                 await RefreshItemsFromTableAsync();
             };
             ActionBar.AddTab(tab);
@@ -96,9 +94,21 @@ namespace quotation
             //tab.SetIcon(Resource.Drawable.tab2_icon);
             tab.TabSelected += async (sender, args) =>
             {
+                tab.SetText(Resources.GetString(Resource.String.author_tab_text));
                 await RefreshItemsFromTableAsync();
             };
             ActionBar.AddTab(tab);
+
+            dailyButton = FindViewById<Button>(Resource.Id.dailyButton);
+            dailyButton.Click += (sender, args) =>
+            {
+                RefreshDailyItems();
+            };
+        }
+
+        private void RefreshDailyItems()
+        {
+            StartActivity(typeof(DailyActivity));
         }
 
         //async Task RefreshAuthorItemsFromTableAsync()
@@ -140,18 +150,18 @@ namespace quotation
                     categoryItemList = await categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
                     searchAdapter.OriginalItems = categoryItemList.Select(s => s.WriterName).ToArray();
                     actv.Adapter = searchAdapter;
-                }                   
+                    adapter.Clear();
+                }
                 else
                 {
                     categoryItemList = await categoryTable.Where(item => item.CategoryName != null).OrderBy(x => x.CategoryName).ToListAsync();
                     searchAdapter.OriginalItems = categoryItemList.Select(s => s.CategoryName).ToArray();
                     actv.Adapter = searchAdapter;
-                }
-                    
-                adapter.Clear();
+                    adapter.Clear();
 
-                foreach (CategoryItem current in categoryItemList)
-                    adapter.Add(current);                                 
+                    foreach (CategoryItem current in categoryItemList)
+                        adapter.Add(current);
+                }
             }
             catch (Exception e)
             {

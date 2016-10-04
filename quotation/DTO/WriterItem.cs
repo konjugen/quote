@@ -20,5 +20,6 @@ namespace quotation.DTO
         public string Content { get; set; }
         public int PkWriterId { get; set; }
         public string CategoryName { get; set; }
+        public bool IsDaily { get; set; }
     }
 }

@@ -11,12 +11,13 @@
         android:layout_height="wrap_content"
         android:paddingBottom="1dp"
         android:id="@+id/categoryLayout">
-        <TextView
+      <TextView
             android:text="@string/checkbox_text"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textSize="20sp"
             android:id="@+id/categoryText"
-            android:gravity="center" />
+            android:gravity="left"
+            android:layout_marginLeft="3dp"/>
     </LinearLayout>
 </LinearLayout>
