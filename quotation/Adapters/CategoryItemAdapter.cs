@@ -39,7 +39,7 @@ namespace quotation.Adapters
             //{
             //    ch.text.Text = items[position].CategoryName;
             //    ch.ItemView.Tag = items[position].CategoryName;
-            ch.text.Text = items[position].CategoryName;
+            ch.text.Text = items[position].PkCategoryId + ". " + items[position].CategoryName;
             ch.ItemView.Tag = items[position].CategoryName;
             //else
             //{

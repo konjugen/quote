@@ -37,6 +37,8 @@ namespace quotation
 
             SetContentView(Resource.Layout.Daily_Activity);
 
+            GAService.GetGASInstance().Initialize(this);
+
             adapter = new DailyAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewDaily));
 
             listViewDaily = (RecyclerView)FindViewById(Resource.Id.listViewDaily);

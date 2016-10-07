@@ -31,9 +31,9 @@ namespace quotation
 
         private RecyclerView listViewWriter;
 
-        private AutoCompleteTextView actv;
+        //private AutoCompleteTextView actv;
 
-        private SearchAdapter searchAdapter;
+        //private SearchAdapter searchAdapter;
 
         public string selectedItem;
         protected override async void OnCreate(Bundle bundle)
@@ -44,11 +44,13 @@ namespace quotation
 
             SetContentView(Resource.Layout.Writer_Activity);
 
-            actv = (AutoCompleteTextView)FindViewById(Resource.Id.author_autocomplete_search);
+            GAService.GetGASInstance().Initialize(this);
 
-            actv.Threshold = 1;
+            //actv = (AutoCompleteTextView)FindViewById(Resource.Id.author_autocomplete_search);
 
-            searchAdapter = new SearchAdapter(this);
+            //actv.Threshold = 1;
+
+            //searchAdapter = new SearchAdapter(this);
 
             adapter = new WriterItemAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewWriter));
 

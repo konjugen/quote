@@ -17,9 +17,7 @@ using Android.Support.V7.Widget;
 
 namespace quotation
 {
-    [Activity(MainLauncher = true,
-               Icon = "@drawable/ic_launcher", Label = "@string/app_name",
-               Theme = "@style/AppTheme")]
+    [Activity(MainLauncher = true)]
     public class MainActivity : Activity
     {
         private MobileServiceClient client;
@@ -35,11 +33,11 @@ namespace quotation
 
         private RecyclerView listViewCategory;
 
-        ActionBar.Tab tab;
+        private ActionBar.Tab categoryTab, authorTab;
 
         Button dailyButton;
 
-        protected override void OnCreate(Bundle bundle)
+        protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
@@ -47,11 +45,15 @@ namespace quotation
 
             SetContentView(Resource.Layout.Main_Activity);
 
+            GAService.GetGASInstance().Initialize(this);
+            Window.RequestFeature(WindowFeatures.NoTitle);
+
             //adapter = new CategoryAdapter(this, Resource.Layout.Row_List_Category);
 
             //listViewCategory = FindViewById<ListView>(Resource.Id.listViewCategory);
 
-            //listViewCategory.Adapter = adapter;      
+            //listViewCategory.Adapter = adapter;  
+
 
             actv = (AutoCompleteTextView)FindViewById(Resource.Id.category_autocomplete_search);
 
@@ -79,27 +81,30 @@ namespace quotation
 
             categoryTable = client.GetTable<CategoryItem>();
 
-            tab = ActionBar.NewTab();
-            tab.SetText(Resources.GetString(Resource.String.category_tab_text));
+            categoryTab = ActionBar.NewTab();
+            authorTab = ActionBar.NewTab();
+            categoryTab.SetText(Resources.GetString(Resource.String.category_tab_text));
             //tab.SetIcon(Resource.Drawable.tab1_icon);
-            tab.TabSelected += async (sender, args) =>
+            categoryTab.TabSelected += (sender, args) =>
             {
-                tab.SetText(Resources.GetString(Resource.String.category_tab_text));
-                await RefreshItemsFromTableAsync();
+                categoryTab.SetText(Resources.GetString(Resource.String.category_tab_text));
+                RefreshItemsFromTableAsync();
             };
-            ActionBar.AddTab(tab);
+            ActionBar.AddTab(categoryTab);
 
-            tab = ActionBar.NewTab();
-            tab.SetText(Resources.GetString(Resource.String.author_tab_text));
+
+            authorTab.SetText(Resources.GetString(Resource.String.author_tab_text));
             //tab.SetIcon(Resource.Drawable.tab2_icon);
-            tab.TabSelected += async (sender, args) =>
+            authorTab.TabSelected += (sender, args) =>
             {
-                tab.SetText(Resources.GetString(Resource.String.author_tab_text));
-                await RefreshItemsFromTableAsync();
+                authorTab.SetText(Resources.GetString(Resource.String.author_tab_text));
+                RefreshItemsFromTableAsync();
             };
-            ActionBar.AddTab(tab);
+            ActionBar.AddTab(authorTab);
 
             dailyButton = FindViewById<Button>(Resource.Id.dailyButton);
+            var text = await categoryTable.Where(q => q.IsDaily).Select(s => s.WriterName).ToListAsync();
+            dailyButton.Text = text[0];
             dailyButton.Click += (sender, args) =>
             {
                 RefreshDailyItems();
@@ -138,15 +143,15 @@ namespace quotation
         //    }
         //}
 
-        async Task RefreshItemsFromTableAsync()
+        public async void RefreshItemsFromTableAsync()
         {
             // TODO:: Uncomment the following code when using a mobile service
             try
             {
                 // Get the items that weren't marked as completed and add them in the adapter
                 searchAdapter = new SearchAdapter(this);
-                if (tab.Text == "Author")
-                {
+                if (ActionBar.SelectedTab == authorTab)
+                {                   
                     categoryItemList = await categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
                     searchAdapter.OriginalItems = categoryItemList.Select(s => s.WriterName).ToArray();
                     actv.Adapter = searchAdapter;

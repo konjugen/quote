@@ -8,13 +8,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search" />
+        android:text="Search Here!" />
     <AutoCompleteTextView
         android:id="@+id/category_autocomplete_search"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:singleLine="true"/>
+        android:singleLine="true"
+        android:hint="Search" />
 <!--<ListView
         android:minWidth="25px"
         android:minHeight="25px"
@@ -22,10 +23,10 @@
         android:layout_height="match_parent"
         android:id="@+id/listViewCategory" />-->
     <Button
-        android:text="DAILY: What Happened Today!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/dailyButton" />
+        android:id="@+id/dailyButton"
+        android:background="#007FFF" />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
