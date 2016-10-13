@@ -17,7 +17,7 @@ using Android.Support.V7.Widget;
 
 namespace quotation
 {
-    [Activity(MainLauncher = true)]
+    [Activity(MainLauncher = true, Label = "@string/app_name", Icon = "@drawable/ic_launcher", Theme = "@android:style/Theme.Material.Light")]
     public class MainActivity : Activity
     {
         private MobileServiceClient client;
@@ -39,14 +39,14 @@ namespace quotation
 
         protected override async void OnCreate(Bundle bundle)
         {
+            
             base.OnCreate(bundle);
 
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
             SetContentView(Resource.Layout.Main_Activity);
 
-            GAService.GetGASInstance().Initialize(this);
-            Window.RequestFeature(WindowFeatures.NoTitle);
+            GAService.GetGASInstance().Initialize(this);  
 
             //adapter = new CategoryAdapter(this, Resource.Layout.Row_List_Category);
 

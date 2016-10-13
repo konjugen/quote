@@ -17,8 +17,7 @@ using System.Threading.Tasks;
 
 namespace quotation
 {
-    [Activity(Icon = "@drawable/ic_launcher", Label = "@string/app_name",
-              Theme = "@style/AppTheme")]
+    [Activity(Label = "@string/app_name", Icon = "@drawable/ic_launcher", Theme = "@android:style/Theme.Material.Light")]
     public class DailyActivity : Activity
     {
         private MobileServiceClient client;
