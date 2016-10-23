@@ -1,1 +1,0 @@
-d:\Users\anil.gurbuz\Desktop\quote\Components\AnimatedCircleLoadingView-1.1.2.1\samples\AnimatedCircleLoadingViewSample\AnimatedCircleLoadingViewSample\obj\Debug\AnimatedCircleLoadingViewSample.csprojResolveAssemblyReference.cache
