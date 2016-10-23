@@ -8,6 +8,7 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Newtonsoft
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Plugin.CurrentActivity.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Plugin.Share.Abstractions.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Plugin.Share.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\RadialProgress.Android.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\SQLitePCL.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\SQLitePCL.Ext.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Net.Http.Extensions.dll

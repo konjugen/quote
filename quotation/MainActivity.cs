@@ -14,9 +14,28 @@ using quotation.DTO;
 using quotation.Adapters;
 using System.Threading.Tasks;
 using Android.Support.V7.Widget;
+using RadialProgress;
+using Android.Graphics;
 
 namespace quotation
 {
+    public class x : CountDownTimer
+    {
+        public x(long millisInFuture, long countDownInterval):base(millisInFuture, countDownInterval)
+        {
+
+        }
+        public override void OnFinish()
+        {
+            MainActivity a = (MainActivity)Application.Context.ApplicationContext;
+            a.SetContentView(Resource.Layout.Main_Activity);
+        }
+
+        public override void OnTick(long millisUntilFinished)
+        {
+            //throw new NotImplementedException();
+        }
+    }
     [Activity(MainLauncher = true, Label = "@string/app_name", Icon = "@drawable/ic_launcher", Theme = "@android:style/Theme.Material.Light")]
     public class MainActivity : Activity
     {
@@ -37,24 +56,28 @@ namespace quotation
 
         Button dailyButton;
 
+        RadialProgressView progressView;
+
         protected override async void OnCreate(Bundle bundle)
-        {
-            
+        {            
             base.OnCreate(bundle);
 
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
-            SetContentView(Resource.Layout.Main_Activity);
+            SetContentView(Resource.Layout.splash_screen);
 
-            GAService.GetGASInstance().Initialize(this);  
+            new x(3000, 1000).Start();
+
+            GAService.GetGASInstance().Initialize(this);
 
             //adapter = new CategoryAdapter(this, Resource.Layout.Row_List_Category);
 
             //listViewCategory = FindViewById<ListView>(Resource.Id.listViewCategory);
 
-            //listViewCategory.Adapter = adapter;  
-
-
+            //listViewCategory.Adapter = adapter;     
+            
+            progressView = (RadialProgressView)FindViewById(Resource.Id.progressView);
+           
             actv = (AutoCompleteTextView)FindViewById(Resource.Id.category_autocomplete_search);
 
             actv.Threshold = 1;
@@ -109,7 +132,7 @@ namespace quotation
             {
                 RefreshDailyItems();
             };
-        }
+    }
 
         private void RefreshDailyItems()
         {

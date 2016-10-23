@@ -108,6 +108,7 @@ class MonoPackageManager_Resources {
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Share.Abstractions.dll",
 		"Plugin.Share.dll",
+		"RadialProgress.Android.dll",
 		"SQLitePCL.dll",
 		"SQLitePCL.Ext.dll",
 		"System.Net.Http.Extensions.dll",

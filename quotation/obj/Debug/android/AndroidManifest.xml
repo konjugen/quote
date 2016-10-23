@@ -15,6 +15,12 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:noHistory="true" android:theme="@style/AppTheme" android:name="md5905b39261ce1e271f13ef34e4d812a7c.SplashActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
     <activity android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@android:style/Theme.Material.Light" android:name="md5905b39261ce1e271f13ef34e4d812a7c.WriterActivity" />
     <activity android:label="Web Authenticator" android:name="md588920fb9403ed228b036d6919cddd329.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="md588920fb9403ed228b036d6919cddd329.WebAuthenticatorActivity" />

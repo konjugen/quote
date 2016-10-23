@@ -5,30 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/dailyButton" />
-    <!--<TextView
+  <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search Here!" />-->
-    <AutoCompleteTextView
-        android:id="@+id/category_autocomplete_search"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:singleLine="true"
-        android:hint="Search" />
-<!--<ListView
+  <AutoCompleteTextView
+      android:id="@+id/category_autocomplete_search"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="5dp"
+      android:layout_marginTop="5dp"
+      android:singleLine="true"
+      android:hint="Search" />
+  <!--<ListView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listViewCategory" />-->
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listViewCategory"
-        android:background="#ECEFF1" />
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/dailyButton"
+      android:layout_marginLeft="5dp"
+      android:layout_marginRight="5dp" />
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/listViewCategory"
+      android:background="#ECEFF1" />
+  <radialprogress.RadialProgressView
+      android:id="@+id/progressView"
+      android:layout_width="200px"
+      android:layout_height="200px"
+      min_value="0"
+      max_value="100"
+      progress_type="big"
+      hide_label="false"
+      progress_color="#FF00FF" />
 </LinearLayout>

@@ -2,10 +2,18 @@ quotation.DailyActivity, quotation;md5905b39261ce1e271f13ef34e4d812a7c.DailyActi
 quotation.DailyActivity, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5905b39261ce1e271f13ef34e4d812a7c.DailyActivity
 quotation.DailyActivity;md5905b39261ce1e271f13ef34e4d812a7c.DailyActivity
 quotation.DailyActivity;md5905b39261ce1e271f13ef34e4d812a7c.DailyActivity
+quotation.x, quotation;md5905b39261ce1e271f13ef34e4d812a7c.x
+quotation.x, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5905b39261ce1e271f13ef34e4d812a7c.x
+quotation.x;md5905b39261ce1e271f13ef34e4d812a7c.x
+quotation.x;md5905b39261ce1e271f13ef34e4d812a7c.x
 quotation.MainActivity, quotation;md5905b39261ce1e271f13ef34e4d812a7c.MainActivity
 quotation.MainActivity, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5905b39261ce1e271f13ef34e4d812a7c.MainActivity
 quotation.MainActivity;md5905b39261ce1e271f13ef34e4d812a7c.MainActivity
 quotation.MainActivity;md5905b39261ce1e271f13ef34e4d812a7c.MainActivity
+quotation.SplashActivity, quotation;md5905b39261ce1e271f13ef34e4d812a7c.SplashActivity
+quotation.SplashActivity, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5905b39261ce1e271f13ef34e4d812a7c.SplashActivity
+quotation.SplashActivity;md5905b39261ce1e271f13ef34e4d812a7c.SplashActivity
+quotation.SplashActivity;md5905b39261ce1e271f13ef34e4d812a7c.SplashActivity
 quotation.ToDoItemWrapper, quotation;md5905b39261ce1e271f13ef34e4d812a7c.ToDoItemWrapper
 quotation.ToDoItemWrapper, quotation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5905b39261ce1e271f13ef34e4d812a7c.ToDoItemWrapper
 quotation.ToDoItemWrapper;md5905b39261ce1e271f13ef34e4d812a7c.ToDoItemWrapper
@@ -70,6 +78,10 @@ Xamarin.Auth._MobileServices.WebAuthenticatorActivity/Client, Microsoft.WindowsA
 Xamarin.Auth._MobileServices.WebAuthenticatorActivity+Client, Microsoft.WindowsAzure.Mobile.Ext, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35;md588920fb9403ed228b036d6919cddd329.WebAuthenticatorActivity_Client
 Xamarin.Auth._MobileServices.WebAuthenticatorActivity.Client;md588920fb9403ed228b036d6919cddd329.WebAuthenticatorActivity_Client
 xamarin.auth._mobileservices.WebAuthenticatorActivity_Client;md588920fb9403ed228b036d6919cddd329.WebAuthenticatorActivity_Client
+RadialProgress.RadialProgressView, RadialProgress.Android;md565ae71dbe3b466a414b8046441055195.RadialProgressView
+RadialProgress.RadialProgressView, RadialProgress.Android, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null;md565ae71dbe3b466a414b8046441055195.RadialProgressView
+RadialProgress.RadialProgressView;md565ae71dbe3b466a414b8046441055195.RadialProgressView
+radialprogress.RadialProgressView;md565ae71dbe3b466a414b8046441055195.RadialProgressView
 Android.Support.CustomTabs.CustomTabsClient/CustomTabsCallbackImpl, Xamarin.Android.Support.CustomTabs;android.support.customtabs.CustomTabsClient_CustomTabsCallbackImpl
 Android.Support.CustomTabs.CustomTabsClient+CustomTabsCallbackImpl, Xamarin.Android.Support.CustomTabs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.customtabs.CustomTabsClient_CustomTabsCallbackImpl
 Android.Support.CustomTabs.CustomTabsClient.CustomTabsCallbackImpl;android.support.customtabs.CustomTabsClient_CustomTabsCallbackImpl

@@ -112,5 +112,9 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Xamarin.Fo
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values\fsmtheme.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\RadialProgress.Android.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable\splash_logo.png
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values\colors.xml
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\splash_screen.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb
