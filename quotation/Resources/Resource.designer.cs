@@ -639,9 +639,6 @@ namespace quotation
 			// aapt resource value: 0x7f0100db
 			public const int logoDescription = 2130772187;
 			
-			// aapt resource value: 0x7f010128
-			public const int mainColor = 2130772264;
-			
 			// aapt resource value: 0x7f01010e
 			public const int maxActionInlineWidth = 2130772238;
 			
@@ -737,9 +734,6 @@ namespace quotation
 			
 			// aapt resource value: 0x7f01007a
 			public const int searchViewStyle = 2130772090;
-			
-			// aapt resource value: 0x7f010129
-			public const int secondaryColor = 2130772265;
 			
 			// aapt resource value: 0x7f0100a3
 			public const int seekBarStyle = 2130772131;
@@ -1892,22 +1886,16 @@ namespace quotation
 			public const int design_snackbar_background = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int ic_checked_mark = 2130837581;
-			
-			// aapt resource value: 0x7f02004e
-			public const int ic_failure_mark = 2130837582;
-			
-			// aapt resource value: 0x7f02004f
-			public const int ic_launcher = 2130837583;
-			
-			// aapt resource value: 0x7f020052
-			public const int notification_template_icon_bg = 2130837586;
+			public const int ic_launcher = 2130837581;
 			
 			// aapt resource value: 0x7f020050
-			public const int share = 2130837584;
+			public const int notification_template_icon_bg = 2130837584;
 			
-			// aapt resource value: 0x7f020051
-			public const int splash_logo = 2130837585;
+			// aapt resource value: 0x7f02004e
+			public const int share = 2130837582;
+			
+			// aapt resource value: 0x7f02004f
+			public const int splash_logo = 2130837583;
 			
 			static Drawable()
 			{
@@ -3986,16 +3974,6 @@ namespace quotation
 			
 			// aapt resource value: 4
 			public const int AlertDialog_singleChoiceItemLayout = 4;
-			
-			public static int[] AnimatedCircleLoadingView = new int[] {
-					2130772264,
-					2130772265};
-			
-			// aapt resource value: 0
-			public const int AnimatedCircleLoadingView_mainColor = 0;
-			
-			// aapt resource value: 1
-			public const int AnimatedCircleLoadingView_secondaryColor = 1;
 			
 			public static int[] AppBarLayout = new int[] {
 					16842964,

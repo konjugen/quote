@@ -1302,15 +1302,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int logoDescription=0x7f0100db;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int mainColor=0x7f010128;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -1518,15 +1509,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int searchViewStyle=0x7f01007a;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int secondaryColor=0x7f010129;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -2438,12 +2420,10 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f02004a;
         public static final int design_fab_background=0x7f02004b;
         public static final int design_snackbar_background=0x7f02004c;
-        public static final int ic_checked_mark=0x7f02004d;
-        public static final int ic_failure_mark=0x7f02004e;
-        public static final int ic_launcher=0x7f02004f;
-        public static final int notification_template_icon_bg=0x7f020052;
-        public static final int share=0x7f020050;
-        public static final int splash_logo=0x7f020051;
+        public static final int ic_launcher=0x7f02004d;
+        public static final int notification_template_icon_bg=0x7f020050;
+        public static final int share=0x7f02004e;
+        public static final int splash_logo=0x7f02004f;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090079;
@@ -3766,51 +3746,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name quotation.quotation:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
-        /** Attributes that can be used with a AnimatedCircleLoadingView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AnimatedCircleLoadingView_mainColor quotation.quotation:mainColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AnimatedCircleLoadingView_secondaryColor quotation.quotation:secondaryColor}</code></td><td></td></tr>
-           </table>
-           @see #AnimatedCircleLoadingView_mainColor
-           @see #AnimatedCircleLoadingView_secondaryColor
-         */
-        public static final int[] AnimatedCircleLoadingView = {
-            0x7f010128, 0x7f010129
-        };
-        /**
-          <p>This symbol is the offset where the {@link quotation.quotation.R.attr#mainColor}
-          attribute's value can be found in the {@link #AnimatedCircleLoadingView} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name quotation.quotation:mainColor
-        */
-        public static final int AnimatedCircleLoadingView_mainColor = 0;
-        /**
-          <p>This symbol is the offset where the {@link quotation.quotation.R.attr#secondaryColor}
-          attribute's value can be found in the {@link #AnimatedCircleLoadingView} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name quotation.quotation:secondaryColor
-        */
-        public static final int AnimatedCircleLoadingView_secondaryColor = 1;
         /** Attributes that can be used with a AppBarLayout.
            <p>Includes the following attributes:</p>
            <table>
