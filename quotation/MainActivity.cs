@@ -7,128 +7,113 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Microsoft.WindowsAzure.MobileServices;
 using quotation.DTO;
 using quotation.Adapters;
 using System.Threading.Tasks;
 using Android.Support.V7.Widget;
-using RadialProgress;
 using Android.Graphics;
+using Android.Views;
+using Android.Views.InputMethods;
+using static Android.App.ActionBar;
+using Button = Android.Widget.Button;
+using ProgressBar = Android.Widget.ProgressBar;
 
 namespace quotation
 {
-    public class x : CountDownTimer
-    {
-        public x(long millisInFuture, long countDownInterval):base(millisInFuture, countDownInterval)
-        {
-
-        }
-        public override void OnFinish()
-        {
-            MainActivity a = (MainActivity)Application.Context.ApplicationContext;
-            a.SetContentView(Resource.Layout.Main_Activity);
-        }
-
-        public override void OnTick(long millisUntilFinished)
-        {
-            //throw new NotImplementedException();
-        }
-    }
-    [Activity(MainLauncher = true, Label = "@string/app_name", Icon = "@drawable/ic_launcher", Theme = "@android:style/Theme.Material.Light")]
+    [Activity(MainLauncher = false, Label = "@string/app_name", Icon = "@drawable/ic_launcher", Theme = "@android:style/Theme.Material.Light")]
     public class MainActivity : Activity
     {
-        private MobileServiceClient client;
-        private IMobileServiceTable<CategoryItem> categoryTable;
+        private MobileServiceClient _client;
+        private IMobileServiceTable<CategoryItem> _categoryTable;
 
-        public List<CategoryItem> categoryItemList = new List<CategoryItem>();
+        public List<CategoryItem> CategoryItemList = new List<CategoryItem>();
 
         //private CategoryAdapter adapter;
-        private CategoryItemAdapter adapter;
-        private SearchAdapter searchAdapter;
+        private CategoryItemAdapter _adapter;
+        private SearchAdapter _searchAdapter;
 
-        private AutoCompleteTextView actv;
+        private AutoCompleteTextView _actv;
 
-        private RecyclerView listViewCategory;
+        private RecyclerView _listViewCategory;
 
-        private ActionBar.Tab categoryTab, authorTab;
+        private Tab _categoryTab, _authorTab;
 
-        Button dailyButton;
-
-        RadialProgressView progressView;
+        private Button _dailyButton;
+        private ProgressDialog _progressDialog;
+        private TextView _textView;
 
         protected override async void OnCreate(Bundle bundle)
-        {            
-            base.OnCreate(bundle);
-
+        {
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+            base.OnCreate(bundle);     
 
-            SetContentView(Resource.Layout.splash_screen);
-
-            new x(3000, 1000).Start();
+            SetContentView(Resource.Layout.Main_Activity);
 
             GAService.GetGASInstance().Initialize(this);
 
-            //adapter = new CategoryAdapter(this, Resource.Layout.Row_List_Category);
+            _textView = (TextView)FindViewById(Resource.Id.searchBytext);
 
-            //listViewCategory = FindViewById<ListView>(Resource.Id.listViewCategory);
+            _progressDialog = new ProgressDialog(this);
+            _progressDialog.Indeterminate = true;
+            _progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
+            _progressDialog.SetCancelable(false);
 
-            //listViewCategory.Adapter = adapter;     
-            
-            progressView = (RadialProgressView)FindViewById(Resource.Id.progressView);
-           
-            actv = (AutoCompleteTextView)FindViewById(Resource.Id.category_autocomplete_search);
+            _progressDialog.SetMessage("Loading...");
 
-            actv.Threshold = 1;
+            _actv = (AutoCompleteTextView)FindViewById(Resource.Id.category_autocomplete_search);
+          
+            _actv.Threshold = 1;
 
             var disp = WindowManager.DefaultDisplay;
             var widht = disp.Width;
-            actv.DropDownWidth = widht;
+            
+            _actv.DropDownWidth = widht;
 
-            actv.ItemClick += actv_ItemClick;
+            _actv.ItemClick += actv_ItemClick;
 
-            adapter = new CategoryItemAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewCategory));
+            _adapter = new CategoryItemAdapter(this, FindViewById<RecyclerView>(Resource.Id.listViewCategory));
 
-            listViewCategory = (RecyclerView)FindViewById(Resource.Id.listViewCategory);
+            _listViewCategory = (RecyclerView)FindViewById(Resource.Id.listViewCategory);
 
-            listViewCategory.SetLayoutManager(new LinearLayoutManager(this));
+            _listViewCategory.SetLayoutManager(new LinearLayoutManager(this));
 
-            listViewCategory.SetAdapter(adapter);
+            _listViewCategory.SetAdapter(_adapter);
 
             CurrentPlatform.Init();
 
-            client = new MobileServiceClient(
+            _client = new MobileServiceClient(
                 Constants.applicationURL,
                 Constants.applicationKey);
 
-            categoryTable = client.GetTable<CategoryItem>();
+            _categoryTable = _client.GetTable<CategoryItem>();
 
-            categoryTab = ActionBar.NewTab();
-            authorTab = ActionBar.NewTab();
-            categoryTab.SetText(Resources.GetString(Resource.String.category_tab_text));
+            _categoryTab = ActionBar.NewTab();
+            _authorTab = ActionBar.NewTab();
+            _categoryTab.SetText(Resources.GetString(Resource.String.category_tab_text));
             //tab.SetIcon(Resource.Drawable.tab1_icon);
-            categoryTab.TabSelected += (sender, args) =>
+            _categoryTab.TabSelected += (sender, args) =>
             {
-                categoryTab.SetText(Resources.GetString(Resource.String.category_tab_text));
+                _categoryTab.SetText(Resources.GetString(Resource.String.category_tab_text));
                 RefreshItemsFromTableAsync();
             };
-            ActionBar.AddTab(categoryTab);
+            ActionBar.AddTab(_categoryTab);
 
 
-            authorTab.SetText(Resources.GetString(Resource.String.author_tab_text));
+            _authorTab.SetText(Resources.GetString(Resource.String.author_tab_text));
             //tab.SetIcon(Resource.Drawable.tab2_icon);
-            authorTab.TabSelected += (sender, args) =>
+            _authorTab.TabSelected += (sender, args) =>
             {
-                authorTab.SetText(Resources.GetString(Resource.String.author_tab_text));
+                _authorTab.SetText(Resources.GetString(Resource.String.author_tab_text));
                 RefreshItemsFromTableAsync();
             };
-            ActionBar.AddTab(authorTab);
+            ActionBar.AddTab(_authorTab);
 
-            dailyButton = FindViewById<Button>(Resource.Id.dailyButton);
-            var text = await categoryTable.Where(q => q.IsDaily).Select(s => s.WriterName).ToListAsync();
-            dailyButton.Text = text[0];
-            dailyButton.Click += (sender, args) =>
+            _dailyButton = FindViewById<Button>(Resource.Id.dailyButton);
+            var text = await _categoryTable.Where(q => q.IsDaily).Select(s => s.WriterName).ToListAsync();
+            _dailyButton.Text = text[0];
+            _dailyButton.Click += (sender, args) =>
             {
                 RefreshDailyItems();
             };
@@ -139,56 +124,37 @@ namespace quotation
             StartActivity(typeof(DailyActivity));
         }
 
-        //async Task RefreshAuthorItemsFromTableAsync()
-        //{
-        //    try
-        //    {
-        //        // Get the items that weren't marked as completed and add them in the adapter
-        //        categoryItemList = await categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
-        //        adapter.Clear();
-
-        //        foreach (CategoryItem current in categoryItemList)
-        //            adapter.Add(current);
-
-        //        searchAdapter = new SearchAdapter(this);
-
-        //        searchAdapter.OriginalItems = categoryItemList.Select(s => s.WriterName).ToArray();
-        //        var disp = WindowManager.DefaultDisplay;
-        //        var widht = disp.Width;
-        //        actv.DropDownWidth = widht;
-        //        actv.Adapter = searchAdapter;
-
-        //        actv.ItemClick += actv_ItemClick;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        CreateAndShowDialog(e, "Error");
-        //    }
-        //}
-
         public async void RefreshItemsFromTableAsync()
         {
             // TODO:: Uncomment the following code when using a mobile service
             try
             {
                 // Get the items that weren't marked as completed and add them in the adapter
-                searchAdapter = new SearchAdapter(this);
-                if (ActionBar.SelectedTab == authorTab)
-                {                   
-                    categoryItemList = await categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
-                    searchAdapter.OriginalItems = categoryItemList.Select(s => s.WriterName).ToArray();
-                    actv.Adapter = searchAdapter;
-                    adapter.Clear();
+                _searchAdapter = new SearchAdapter(this);
+                if (ActionBar.SelectedTab == _authorTab)
+                {
+                    _textView.Text = "Search By Author";
+
+                    _progressDialog.Show();
+                    CategoryItemList = await _categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
+                    _progressDialog.Dismiss();
+                    _searchAdapter.OriginalItems = CategoryItemList.Select(s => s.WriterName).ToArray();
+                    _actv.Adapter = _searchAdapter;
+                    _adapter.Clear();
                 }
                 else
                 {
-                    categoryItemList = await categoryTable.Where(item => item.CategoryName != null).OrderBy(x => x.CategoryName).ToListAsync();
-                    searchAdapter.OriginalItems = categoryItemList.Select(s => s.CategoryName).ToArray();
-                    actv.Adapter = searchAdapter;
-                    adapter.Clear();
+                    _textView.Text = "Search By Category";
 
-                    foreach (CategoryItem current in categoryItemList)
-                        adapter.Add(current);
+                    _progressDialog.Show();
+                    CategoryItemList = await _categoryTable.Where(item => item.CategoryName != null).OrderBy(x => x.CategoryName).ToListAsync();
+                    _progressDialog.Dismiss();
+                    _searchAdapter.OriginalItems = CategoryItemList.Select(s => s.CategoryName).ToArray();
+                    _actv.Adapter = _searchAdapter;
+                    _adapter.Clear();
+
+                    foreach (var current in CategoryItemList)
+                        _adapter.Add(current);
                 }
             }
             catch (Exception e)
@@ -199,10 +165,10 @@ namespace quotation
 
         private void actv_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Intent intent = new Intent(listViewCategory.Context, typeof(WriterActivity));
+            Intent intent = new Intent(_listViewCategory.Context, typeof(WriterActivity));
             //var id = ((View)sender).Id;
             intent.PutExtra("selectedCategoryId", e.View.Tag.ToString());
-            listViewCategory.Context.StartActivity(intent);
+            _listViewCategory.Context.StartActivity(intent);
         }
 
         void CreateAndShowDialog(Exception exception, String title)

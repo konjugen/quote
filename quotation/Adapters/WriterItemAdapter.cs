@@ -21,6 +21,7 @@ namespace quotation.Adapters
         private WriterActivity writerActivity;
         private RecyclerView listViewWriter;
         private List<WriterItem> items = new List<WriterItem>();
+        private ProgressDialog _progressDialog;
 
         public WriterItemAdapter(WriterActivity writerActivity, RecyclerView listViewWriter)
         {
@@ -35,7 +36,7 @@ namespace quotation.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            WriterViewHolder ch = holder as WriterViewHolder;
+            var ch = holder as WriterViewHolder;
             ch.contentText.Text = items[position].Content;
             ch.writerText.Text = items[position].WriterName;
             holder.ItemView.Id = Convert.ToInt32(items[position].FkCategoryId);
@@ -44,8 +45,14 @@ namespace quotation.Adapters
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ContentCardView, parent, false);
-            WriterViewHolder ch = new WriterViewHolder(itemView);
+            _progressDialog = new ProgressDialog(Application.Context);
+            _progressDialog.Indeterminate = true;
+            _progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
+            _progressDialog.SetCancelable(false);
+            _progressDialog.SetMessage("Loading...");
+
+            var itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ContentCardView, parent, false);
+            var ch = new WriterViewHolder(itemView);
             itemView.Click += ÝtemView_Click;
             return ch;
         }
@@ -53,10 +60,11 @@ namespace quotation.Adapters
         {
             var intent = new Intent(Intent.ActionSend);
             var id = ((View)sender).Tag.ToString();
-            var itemText = items.Where(x => x.Id == id).FirstOrDefault();
+            var itemText = items.FirstOrDefault(x => x.Id == id);
             intent.SetType("text/plain");
-            intent.PutExtra(Intent.ExtraText, "“" + itemText.Content + "”" + " -" + itemText.WriterName);
-                      
+            if (itemText != null)
+                intent.PutExtra(Intent.ExtraText, "“" + itemText.Content + "”" + " -" + itemText.WriterName);
+
             intent.SetFlags(ActivityFlags.ClearTop);
             intent.SetFlags(ActivityFlags.NewTask);
             var chooserIntent = Intent.CreateChooser(intent, "Paylaþ");

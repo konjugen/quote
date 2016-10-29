@@ -35,6 +35,7 @@ namespace quotation
         //private SearchAdapter searchAdapter;
 
         public string selectedItem;
+
         protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -44,6 +45,8 @@ namespace quotation
             SetContentView(Resource.Layout.Writer_Activity);
 
             GAService.GetGASInstance().Initialize(this);
+
+
 
             //actv = (AutoCompleteTextView)FindViewById(Resource.Id.author_autocomplete_search);
 
