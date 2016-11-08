@@ -6,7 +6,7 @@ using Android.Widget;
 
 namespace quotation.Activities
 {
-    [Activity(MainLauncher = true, NoHistory = true, Label = "@string/app_name")]
+    [Activity(MainLauncher = true, Label = "@string/app_name", Icon = "@drawable/icon", Theme = "@style/AppTheme")]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

@@ -17,7 +17,7 @@ using Android.Support.V7.Widget;
 
 namespace quotation
 {
-    [Activity(Label = "@string/app_name", Icon = "@drawable/ic_launcher", Theme = "@android:style/Theme.Material.Light")]
+    [Activity(MainLauncher = false, Label = "@string/app_name", Icon = "@drawable/icon", Theme = "@style/AppTheme")]
     public class WriterActivity : Activity
     {
         private MobileServiceClient client;
@@ -102,7 +102,7 @@ namespace quotation
             {
                 // Get the items that weren't marked as completed and add them in the adapter
                 writerItemList = await writerTable.Where(item => item.CategoryName == selectedItem).OrderBy(x => x.WriterName).ToListAsync();
-                if(writerItemList.Count == 0)
+                if (writerItemList.Count == 0)
                     writerItemList = await writerTable.Where(item => item.WriterName == selectedItem).OrderBy(x => x.WriterName).ToListAsync();
                 adapter.Clear();
 

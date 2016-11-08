@@ -22,7 +22,7 @@ using ProgressBar = Android.Widget.ProgressBar;
 
 namespace quotation
 {
-    [Activity(MainLauncher = false, Label = "@string/app_name", Icon = "@drawable/ic_launcher", Theme = "@android:style/Theme.Material.Light")]
+    [Activity(MainLauncher = false, Label = "@string/app_name", Icon = "@drawable/icon", Theme = "@style/AppTheme")]
     public class MainActivity : Activity
     {
         private MobileServiceClient _client;
@@ -134,7 +134,11 @@ namespace quotation
                 if (ActionBar.SelectedTab == _authorTab)
                 {
                     _textView.Text = "Search By Author";
-
+                    var layout = (LinearLayout)FindViewById(Resource.Id.LinearLayout1);
+                    layout.SetBackgroundColor(Color.White);
+                    var imageView = (ImageView)FindViewById(Resource.Id.authorBackGroundImageView);
+                    imageView.SetBackgroundResource(Resource.Drawable.icon);
+                    
                     _progressDialog.Show();
                     CategoryItemList = await _categoryTable.Where(item => item.WriterName != null).OrderBy(x => x.WriterName).ToListAsync();
                     _progressDialog.Dismiss();

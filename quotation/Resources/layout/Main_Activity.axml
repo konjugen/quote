@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:focusableInTouchMode="true">
-<TextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search By Category"
-        android:id="@+id/searchBytext"/>
+        android:id="@+id/searchBytext" />
     <AutoCompleteTextView
         android:id="@+id/category_autocomplete_search"
         android:layout_width="fill_parent"
@@ -31,4 +31,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/listViewCategory"
         android:background="#ECEFF1" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/authorBackGroundImageView" />
 </LinearLayout>

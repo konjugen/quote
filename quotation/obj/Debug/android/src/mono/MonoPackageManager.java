@@ -99,7 +99,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "quotation.dll" comes first in this list. */
 		"quotation.dll",
-		"Mono.Android.Export.dll",
+		"Java.Interop.dll",
 		"Microsoft.WindowsAzure.Mobile.dll",
 		"Microsoft.WindowsAzure.Mobile.Ext.dll",
 		"Newtonsoft.Json.dll",
@@ -120,6 +120,7 @@ class MonoPackageManager_Resources {
 		"System.Runtime.InteropServices.dll",
 		"System.Runtime.Extensions.dll",
 		"System.Reflection.Extensions.dll",
+		"System.ServiceModel.Internals.dll",
 		"System.ObjectModel.dll",
 		"System.Threading.Tasks.dll",
 		"System.Text.RegularExpressions.dll",

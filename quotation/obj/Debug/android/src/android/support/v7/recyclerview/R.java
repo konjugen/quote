@@ -205,28 +205,33 @@ containing a value of this type.
         public static int item_touch_helper_swipe_escape_velocity=0x7f070002;
     }
     public static final class drawable {
-        public static int ic_launcher=0x7f020000;
-        public static int share=0x7f020001;
+        public static int background=0x7f020000;
+        public static int ic_launcher=0x7f020001;
+        public static int icon=0x7f020002;
+        public static int share=0x7f020003;
+        public static int splash_logo=0x7f020004;
     }
     public static final class id {
         public static int LinearLayout1=0x7f080009;
         public static int adjust_height=0x7f080001;
         public static int adjust_width=0x7f080002;
-        public static int authorLayout=0x7f080010;
-        public static int authorText=0x7f080011;
-        public static int categoryLayout=0x7f08000e;
-        public static int categoryText=0x7f08000f;
-        public static int category_autocomplete_search=0x7f08000a;
+        public static int authorBackGroundImageView=0x7f08000e;
+        public static int authorLayout=0x7f080012;
+        public static int authorText=0x7f080013;
+        public static int categoryLayout=0x7f080010;
+        public static int categoryText=0x7f080011;
+        public static int category_autocomplete_search=0x7f08000b;
         public static int contentTextView=0x7f080005;
-        public static int dailyButton=0x7f08000b;
-        public static int imageView1=0x7f080012;
+        public static int dailyButton=0x7f08000c;
+        public static int imageView1=0x7f080014;
         public static int item_touch_helper_previous_elevation=0x7f080000;
-        public static int listViewCategory=0x7f08000c;
+        public static int listViewCategory=0x7f08000d;
         public static int listViewDaily=0x7f080008;
-        public static int listViewWriter=0x7f080013;
-        public static int menu_refresh=0x7f080014;
+        public static int listViewWriter=0x7f080015;
+        public static int menu_refresh=0x7f080016;
         public static int none=0x7f080003;
-        public static int progressBar=0x7f08000d;
+        public static int progressBar=0x7f08000f;
+        public static int searchBytext=0x7f08000a;
         public static int txt_view=0x7f080004;
         public static int writerTextView=0x7f080006;
         public static int ımageView1=0x7f080007;
@@ -293,16 +298,14 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static int AppBaseTheme=0x7f090005;
+        public static int AppBaseTheme=0x7f090004;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static int AppTheme=0x7f090006;
+        public static int AppTheme=0x7f090005;
         public static int Base_CardView=0x7f090001;
         public static int CardView=0x7f090000;
         public static int CardView_Dark=0x7f090002;
         public static int CardView_Light=0x7f090003;
-        public static int FsmTheme=0x7f090004;
     }
     public static final class styleable {
         /** Attributes that can be used with a CardView.

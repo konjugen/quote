@@ -25,5 +25,5 @@ using Android.App;
 
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-[assembly: Application(Theme = "@android:style/Theme.Material.Light")]
+//[assembly: Application(Theme = "@android:style/Theme.Material.Light")]
 

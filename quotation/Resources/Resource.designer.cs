@@ -170,13 +170,22 @@ namespace quotation
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int ic_launcher = 2130837504;
+			public const int background = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int share = 2130837505;
+			public const int ic_launcher = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int splash_logo = 2130837506;
+			public const int icon = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int share = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int share_button = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int splash_logo = 2130837509;
 			
 			static Drawable()
 			{
@@ -200,17 +209,20 @@ namespace quotation
 			// aapt resource value: 0x7f080002
 			public const int adjust_width = 2131230722;
 			
-			// aapt resource value: 0x7f080011
-			public const int authorLayout = 2131230737;
+			// aapt resource value: 0x7f08000e
+			public const int authorBackGroundImageView = 2131230734;
 			
 			// aapt resource value: 0x7f080012
-			public const int authorText = 2131230738;
+			public const int authorLayout = 2131230738;
 			
-			// aapt resource value: 0x7f08000f
-			public const int categoryLayout = 2131230735;
+			// aapt resource value: 0x7f080013
+			public const int authorText = 2131230739;
 			
 			// aapt resource value: 0x7f080010
-			public const int categoryText = 2131230736;
+			public const int categoryLayout = 2131230736;
+			
+			// aapt resource value: 0x7f080011
+			public const int categoryText = 2131230737;
 			
 			// aapt resource value: 0x7f08000b
 			public const int category_autocomplete_search = 2131230731;
@@ -221,8 +233,8 @@ namespace quotation
 			// aapt resource value: 0x7f08000c
 			public const int dailyButton = 2131230732;
 			
-			// aapt resource value: 0x7f080013
-			public const int imageView1 = 2131230739;
+			// aapt resource value: 0x7f080014
+			public const int imageView1 = 2131230740;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
@@ -233,17 +245,17 @@ namespace quotation
 			// aapt resource value: 0x7f080008
 			public const int listViewDaily = 2131230728;
 			
-			// aapt resource value: 0x7f080014
-			public const int listViewWriter = 2131230740;
-			
 			// aapt resource value: 0x7f080015
-			public const int menu_refresh = 2131230741;
+			public const int listViewWriter = 2131230741;
+			
+			// aapt resource value: 0x7f080016
+			public const int menu_refresh = 2131230742;
 			
 			// aapt resource value: 0x7f080003
 			public const int none = 2131230723;
 			
-			// aapt resource value: 0x7f08000e
-			public const int progressBar = 2131230734;
+			// aapt resource value: 0x7f08000f
+			public const int progressBar = 2131230735;
 			
 			// aapt resource value: 0x7f08000a
 			public const int searchBytext = 2131230730;
@@ -404,11 +416,11 @@ namespace quotation
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f090005
-			public const int AppBaseTheme = 2131296261;
+			// aapt resource value: 0x7f090004
+			public const int AppBaseTheme = 2131296260;
 			
-			// aapt resource value: 0x7f090006
-			public const int AppTheme = 2131296262;
+			// aapt resource value: 0x7f090005
+			public const int AppTheme = 2131296261;
 			
 			// aapt resource value: 0x7f090001
 			public const int Base_CardView = 2131296257;
@@ -421,9 +433,6 @@ namespace quotation
 			
 			// aapt resource value: 0x7f090003
 			public const int CardView_Light = 2131296259;
-			
-			// aapt resource value: 0x7f090004
-			public const int FsmTheme = 2131296260;
 			
 			static Style()
 			{
