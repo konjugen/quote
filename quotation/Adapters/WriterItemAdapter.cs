@@ -22,6 +22,7 @@ namespace quotation.Adapters
         private RecyclerView listViewWriter;
         private List<WriterItem> items = new List<WriterItem>();
         private ProgressDialog _progressDialog;
+        private ImageView shareButtonImageView;
 
         public WriterItemAdapter(WriterActivity writerActivity, RecyclerView listViewWriter)
         {
@@ -53,6 +54,7 @@ namespace quotation.Adapters
 
             var itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ContentCardView, parent, false);
             var ch = new WriterViewHolder(itemView);
+
             itemView.Click += ÝtemView_Click;
             return ch;
         }

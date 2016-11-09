@@ -1,83 +1,3 @@
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\quotation.csprojResolveAssemblyReference.cache
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\quotation.dll.config
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\quotation.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\quotation.pdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\quotation.quotation.apk
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\quotation.quotation-Signed.apk
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Mono.Android.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Xamarin.Android.Support.v4.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Xamarin.GooglePlayServices.Analytics.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\quotation.dll
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\quotation.pdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\bin\quotation.quotation.apk
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\main_activity.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\row_list_category.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\contentcardview.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\writer_activity.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\autocomplatesearch.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\daily_activity.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\splash_screen.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\progressbar.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\values\strings.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\layout\row_list_writer.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\values\styles.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\drawable-ldpi\ic_launcher.png
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\drawable-mdpi\ic_launcher.png
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\drawable-xhdpi\ic_launcher.png
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\drawable-hdpi\ic_launcher.png
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\menu\activity_main.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\values-v11\styles.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\values-v14\styles.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\values\fsmtheme.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\drawable\share.png
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\values\colors.xml
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\R.cs.flag
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\uploadflags.txt
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\quotation.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Java.Interop.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Microsoft.CSharp.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Mono.Android.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Mono.Android.Export.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\Mono.CSharp.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\mscorlib.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.ComponentModel.Composition.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Core.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Net.Http.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Runtime.Serialization.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.ServiceModel.Internals.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Xml.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\bin\Debug\System.Xml.Linq.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\Java.Interop.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\Microsoft.CSharp.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\Mono.Android.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\Mono.Android.Export.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\Mono.CSharp.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\mscorlib.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\quotation.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\System.Core.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\System.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\System.Net.Http.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\System.Xml.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\res\drawable\splash_logo.png
-C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.config
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.pdb
@@ -89,9 +9,12 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Mono.Android.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Newtonsoft.Json.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Extensions.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\System.Net.Http.Primitives.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v4.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.GooglePlayServices.Analytics.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
@@ -108,7 +31,6 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\contentcardvie
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\writer_activity.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\autocomplatesearch.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\daily_activity.xml
-d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\splash_screen.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\progressbar.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values\strings.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\layout\row_list_writer.xml
@@ -125,6 +47,8 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\values\colors.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable\splash_logo.png
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable\icon.png
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable\background.png
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable\share_button.png
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable\splash_screen.xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\R.cs.flag
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\uploadflags.txt
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb
@@ -147,6 +71,7 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Microsoft.
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Mono.Android.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Mono.Android.Export.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\Mono.CSharp.dll.mdb
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\mscorlib.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Core.dll.mdb
@@ -156,6 +81,6 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Run
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\res\drawable\share_button.png
+d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.csprojResolveAssemblyReference.cache
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb

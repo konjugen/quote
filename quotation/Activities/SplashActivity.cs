@@ -3,30 +3,37 @@ using Android.App;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
+using Android.Support.V7.App;
+using System.Threading.Tasks;
+using Android.Content;
 
 namespace quotation.Activities
 {
-    [Activity(MainLauncher = true, Label = "@string/app_name", Icon = "@drawable/icon", Theme = "@style/AppTheme")]
-    public class SplashActivity : Activity
+    [Activity(Theme = "@style/SplashTheme", MainLauncher = true, NoHistory = true, Label = "@string/app_name", Icon = "@drawable/icon")]
+    public class SplashActivity : AppCompatActivity
     {
-        protected override void OnCreate(Bundle bundle)
+        public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
         {
-            RequestWindowFeature(WindowFeatures.NoTitle);
-            base.OnCreate(bundle);
-            SetContentView(Resource.Layout.splash_screen);
-
-            var timer = new Timer
-            {
-                Interval = 5000,
-                AutoReset = false
-            };
-            // 3 sec.
-            // Do not reset the timer after it's elapsed
-            timer.Elapsed += (sender, e) =>
-            {
-                StartActivity(typeof(MainActivity));
-            };
-            timer.Start();
+            //RequestWindowFeature(WindowFeatures.NoTitle);
+            base.OnCreate(savedInstanceState, persistentState);
+            //SetContentView(Resource.Drawable.splash_screen);
         }
-    };
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            Task startupWork = new Task(() => {
+                //Log.Debug(TAG, "Performing some startup work that takes a bit of time.");
+                Task.Delay(5000);  // Simulate a bit of startup work.
+                //Log.Debug(TAG, "Working in the background - important stuff.");
+            });
+
+            startupWork.ContinueWith(t => {
+                //Log.Debug(TAG, "Work is finished - start Activity1.");
+                StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+            }, TaskScheduler.FromCurrentSynchronizationContext());
+
+            startupWork.Start();
+        }
+    }
 }
