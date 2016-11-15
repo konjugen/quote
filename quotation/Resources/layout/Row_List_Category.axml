@@ -17,9 +17,9 @@
             android:layout_height="50dp"
             android:textSize="20sp"
             android:id="@+id/categoryText"
-            android:gravity="left"
+            android:gravity="left|bottom"
             android:layout_marginLeft="3dp"
             android:background="#FFFFFF"
-            android:layout_marginBottom="1dp"/>
+            android:layout_marginBottom="1dp" />
     </LinearLayout>
 </LinearLayout>

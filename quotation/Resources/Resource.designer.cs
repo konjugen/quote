@@ -1555,10 +1555,10 @@ namespace quotation
 			public const int share_button = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int splash_logo = 2130837584;
+			public const int splash_screen = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int splash_screen = 2130837585;
+			public const int words = 2130837585;
 			
 			static Drawable()
 			{

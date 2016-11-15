@@ -13,7 +13,9 @@ using Microsoft.WindowsAzure.MobileServices;
 using quotation.DTO;
 using quotation.Adapters;
 using System.Threading.Tasks;
+using Android.Gms.Ads;
 using Android.Support.V7.Widget;
+using Firebase.Database;
 
 namespace quotation
 {
@@ -22,19 +24,19 @@ namespace quotation
     {
         private MobileServiceClient client;
         private IMobileServiceTable<WriterItem> writerTable;
-
         public List<WriterItem> writerItemList = new List<WriterItem>();
-
         //private CategoryAdapter adapter;
         private WriterItemAdapter adapter;
 
         private RecyclerView listViewWriter;
+        private ProgressDialog _progressDialog;
 
         //private AutoCompleteTextView actv;
 
         //private SearchAdapter searchAdapter;
 
         public string selectedItem;
+        protected AdView mAdView;
 
         protected override async void OnCreate(Bundle bundle)
         {
@@ -44,8 +46,18 @@ namespace quotation
 
             SetContentView(Resource.Layout.Writer_Activity);
 
+            mAdView = FindViewById<AdView>(Resource.Id.adViewWriter);
+            var adRequest = new AdRequest.Builder().Build();
+            mAdView.LoadAd(adRequest);
+
             GAService.GetGASInstance().Initialize(this);
 
+            _progressDialog = new ProgressDialog(this);
+            _progressDialog.Indeterminate = true;
+            _progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
+            _progressDialog.SetCancelable(false);
+
+            _progressDialog.SetMessage("Loading...");
 
 
             //actv = (AutoCompleteTextView)FindViewById(Resource.Id.author_autocomplete_search);
@@ -87,7 +99,7 @@ namespace quotation
             //    await RefreshAuthorItemsFromTableAsync();
             //};
             //ActionBar.AddTab(tab);
-
+            _progressDialog.Show();
             await RefreshItemsFromTableAsync();
         }
 
@@ -100,14 +112,32 @@ namespace quotation
             // TODO:: Uncomment the following code when using a mobile service
             try
             {
+                //var firebase = new FirebaseClient("https://best-quotes-24f45.firebaseio.com/");
+                //ContentList = await firebase
+                // .Child("Content")
+                // .OnceAsync<List<Content>>();
+
+                //List<Content> _contentByCategory, _contentByWriter;
+
+                //foreach (var item in ContentList)
+                //{
+                //    _contentByCategory = item.Object.Where(q => q.FkCategoryId.ToString() == selectedItem).OrderBy(x => x.WriterName).ToList();
+                //}
+
+                //foreach (var item in ContentList)
+                //{
+                //    _contentByWriter =
+                //        item.Object.Where(q => q.FkWriterId.ToString() == selectedItem).OrderBy(x => x.WriterName).ToList();
+                //}
                 // Get the items that weren't marked as completed and add them in the adapter
                 writerItemList = await writerTable.Where(item => item.CategoryName == selectedItem).OrderBy(x => x.WriterName).ToListAsync();
                 if (writerItemList.Count == 0)
                     writerItemList = await writerTable.Where(item => item.WriterName == selectedItem).OrderBy(x => x.WriterName).ToListAsync();
                 adapter.Clear();
 
-                foreach (WriterItem current in writerItemList)
+                foreach (var current in writerItemList)
                     adapter.Add(current);
+                _progressDialog.Dismiss();
 
                 //searchAdapter.OriginalItems = writerItemList.Select(s => s.WriterName).ToArray();
                 //var disp = WindowManager.DefaultDisplay;
@@ -140,6 +170,24 @@ namespace quotation
             builder.SetMessage(message);
             builder.SetTitle(title);
             builder.Create().Show();
+        }
+
+        protected override void OnPause()
+        {
+            mAdView?.Pause();
+            base.OnPause();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            mAdView?.Resume();
+        }
+
+        protected override void OnDestroy()
+        {
+            mAdView?.Destroy();
+            base.OnDestroy();
         }
     }
 }

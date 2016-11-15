@@ -27,7 +27,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:background="#C62F2B"
-        android:textColor="#FFFFFF"/>
+        android:textColor="#FFFFFF" />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -53,7 +53,7 @@ namespace quotation.Adapters
         {
             var intent = new Intent(Intent.ActionSend);
             var id = ((View)sender).Tag.ToString();
-            var itemText = items.Where(x => x.Id == id).FirstOrDefault();
+            var itemText = items.FirstOrDefault(x => x.Id == id);
             intent.SetType("text/plain");
             intent.PutExtra(Intent.ExtraText, "“" + itemText.Content + "”" + " -" + itemText.WriterName);
 

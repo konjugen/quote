@@ -83,4 +83,3 @@ d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.csprojResolveAssemblyReference.cache
 d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\quotation.dll.mdb
-d:\Users\anil.gurbuz\Desktop\quote\quotation\bin\Debug\quotation.dll.mdb

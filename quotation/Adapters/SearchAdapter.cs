@@ -101,7 +101,7 @@ namespace quotation.Adapters
                 int i = 0;
                 foreach (string str in this.originalData)
                 {
-                    if (str.ToUpperInvariant().StartsWith(constraint.ToString().ToUpperInvariant()))
+                    if (str.ToUpperInvariant().Contains(constraint.ToString().ToUpperInvariant()))
                     {
                         actualResults[i] = str;
                         i++;

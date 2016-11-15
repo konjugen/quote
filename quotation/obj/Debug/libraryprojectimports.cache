@@ -2,13 +2,28 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\Bolts.AppLinks\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\ExoPlayer\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\PCLStorage\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\Xamarin.Facebook.AudienceNetwork\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\Xamarin.Facebook\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Bolts.AppLinks\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\ExoPlayer\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\PCLStorage\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Facebook.AudienceNetwork\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Facebook\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>d:\Users\anil.gurbuz\Desktop\quote\quotation\obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\Bolts.AppLinks.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\ExoPlayer.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\Microsoft.WindowsAzure.Mobile.Ext.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\PCLStorage.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\Xamarin.Facebook.AudienceNetwork.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\Ahmet Anıl Gürbüz\Documents\GitHub\quote\quotation\obj\Debug\__library_projects__\Xamarin.Facebook.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
