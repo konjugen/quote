@@ -59,7 +59,7 @@ namespace quotation.Adapters
 
             intent.SetFlags(ActivityFlags.ClearTop);
             intent.SetFlags(ActivityFlags.NewTask);
-            var chooserIntent = Intent.CreateChooser(intent, "Paylaþ");
+            var chooserIntent = Intent.CreateChooser(intent, "Share");
             chooserIntent.SetFlags(ActivityFlags.ClearTop);
             chooserIntent.SetFlags(ActivityFlags.NewTask);
             Application.Context.StartActivity(chooserIntent);

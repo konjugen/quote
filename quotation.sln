@@ -5,24 +5,18 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quotation", "quotation\quotation.csproj", "{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{8D5899F4-8172-4CEC-99D3-C9F014DA9246}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Debug|Any CPU.Deploy.0 = Release|Any CPU
 		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E1FCCF4-1FA7-4C23-86B0-19C78B155AA3}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{8D5899F4-8172-4CEC-99D3-C9F014DA9246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D5899F4-8172-4CEC-99D3-C9F014DA9246}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D5899F4-8172-4CEC-99D3-C9F014DA9246}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D5899F4-8172-4CEC-99D3-C9F014DA9246}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

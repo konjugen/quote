@@ -1,18 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 using Android.Support.V7.Widget;
 using quotation.DTO;
 using quotation.Holders;
-using Firebase.Database;
 
 namespace quotation.Adapters
 {
@@ -21,8 +16,7 @@ namespace quotation.Adapters
         private MainActivity categoryActivity;
         private readonly RecyclerView _listViewCategory;
         private List<CategoryItem> items = new List<CategoryItem>();
-        private readonly List<FirebaseObject<List<Category>>> _categoryItems = new List<FirebaseObject<List<Category>>>();
-        private ProgressDialog _progressDialog;
+        //private readonly List<FirebaseObject<List<Category>>> _categoryItems = new List<FirebaseObject<List<Category>>>();
 
         public override int ItemCount
         {

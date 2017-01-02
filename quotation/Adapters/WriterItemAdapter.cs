@@ -1,19 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
-using Android.Widget;
 using Android.Support.V7.Widget;
-using Firebase.Database;
 using quotation.DTO;
 using quotation.Holders;
-using Writer = Java.IO.Writer;
 
 
 namespace quotation.Adapters
@@ -23,7 +17,7 @@ namespace quotation.Adapters
         private WriterActivity writerActivity;
         private RecyclerView listViewWriter;
         private List<WriterItem> items = new List<WriterItem>();
-        private readonly List<FirebaseObject<List<Content>>> _contentItems = new List<FirebaseObject<List<Content>>>();
+        //private readonly List<FirebaseObject<List<Content>>> _contentItems = new List<FirebaseObject<List<Content>>>();
         //private ImageView shareButtonImageView;
 
         public WriterItemAdapter(WriterActivity writerActivity, RecyclerView listViewWriter)

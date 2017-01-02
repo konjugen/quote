@@ -4,10 +4,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="quotation\MainActivity.cs">
-    <Files>
-      <File FileName="quotation\MainActivity.cs" Line="30" Column="38" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.quotation PreferredExecutionTarget="Android.301f96f6" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.ItemProperties.quotation AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_ARMv7a" />
 </Properties>

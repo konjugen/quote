@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 using Android.Gms.Ads;
 using Android.Support.V7.Widget;
 using Android.Graphics;
-using Firebase.Database;
 using static Android.App.ActionBar;
 using Button = Android.Widget.Button;
 
@@ -28,7 +27,7 @@ namespace quotation
 		//public IReadOnlyCollection<FirebaseObject<List<Category>>> CategoryList = new List<FirebaseObject<List<Category>>>();
 		//public IReadOnlyCollection<FirebaseObject<List<Writer>>> WriterList = new List<FirebaseObject<List<Writer>>>();
 
-		private CategoryAdapter adapter;
+		//private CategoryAdapter adapter;
 		private CategoryItemAdapter _adapter;
 		//private WriterAdapter _writerAdapter;
 		private SearchAdapter _searchAdapter;
@@ -42,27 +41,29 @@ namespace quotation
 		private Button _dailyButton;
 		private ProgressDialog _progressDialog;
 		private TextView _textView;
-        protected AdView mAdView;
-        //private IEnumerable<string> _dailyText;
-        //private IEnumerable<string> _dailyContent;
+		protected AdView mAdView;
+		//private IEnumerable<string> _dailyText;
+		//private IEnumerable<string> _dailyContent;
 
-        //private Dictionary<string, int> alphaIndex;
-        //private string[] sections;
-        //private Java.Lang.Object[] sectionsObjects;
+		//private Dictionary<string, int> alphaIndex;
+		//private string[] sections;
+		//private Java.Lang.Object[] sectionsObjects;
 
 
-        protected override async void OnCreate(Bundle bundle)
+		protected override async void OnCreate(Bundle bundle)
 		{
 			ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 			base.OnCreate(bundle);     
 
 			SetContentView(Resource.Layout.Main_Activity);
 
-            mAdView = FindViewById<AdView>(Resource.Id.adView);
-            var adRequest = new AdRequest.Builder().Build();
-            mAdView.LoadAd(adRequest);
+			mAdView = FindViewById<AdView>(Resource.Id.adView);
+			var adRequest = new AdRequest.Builder().Build();
+			mAdView.LoadAd(adRequest);
 
-            GAService.GetGASInstance().Initialize(this);
+			GAService.GetGASInstance().Initialize(this);
+			//FacebookSdk.SdkInitialize(getApplicationContext());
+			//AppEventsLogger.activateApp(this);
 
 			_textView = (TextView)FindViewById(Resource.Id.searchBytext);
 
@@ -73,7 +74,8 @@ namespace quotation
 
 			_progressDialog.SetMessage("Loading 75k+ Quotes...");
 
-			var searcText = (AutoCompleteTextView)FindViewById(Resource.Id.category_autocomplete_search);                     
+			var searcText = (AutoCompleteTextView)FindViewById(Resource.Id.category_autocomplete_search);  
+            searcText.SetCompoundDrawablesRelativeWithIntrinsicBounds(Resource.Drawable.search, 0 ,0 ,0);                   
 					   
 			//var firebase = new FirebaseClient("https://best-quotes-24f45.firebaseio.com/");
 			//CategoryList = await firebase
@@ -114,24 +116,6 @@ namespace quotation
 			_categoryTable = _client.GetTable<CategoryItem>();
 
 			await GetItems();
-
-			//var itess = CategoryItemList.Where(q => q.CategoryName != null).Select(s => s.CategoryName).ToList();
-
-			//alphaIndex = new Dictionary<string, int>();
-			//for (var i = 0; i < itess.Count; i++)
-			//{ // loop through items
-			//    var key = itess[i];
-			//    if (!alphaIndex.ContainsKey(key))
-			//        alphaIndex.Add(key, i); // add each 'new' letter to the index
-			//}
-			//sections = new string[alphaIndex.Keys.Count];
-			//alphaIndex.Keys.CopyTo(sections, 0); // convert letters list to string[]
-			//                                     // Interface requires a Java.Lang.Object[], so we create one here
-			//sectionsObjects = new Java.Lang.Object[sections.Length];
-			//for (int i = 0; i < sections.Length; i++)
-			//{
-			//    sectionsObjects[i] = new Java.Lang.String(sections[i]);
-			//}
 
 			_categoryTab = ActionBar.NewTab();
 			_authorTab = ActionBar.NewTab();
@@ -193,7 +177,7 @@ namespace quotation
 				if (ActionBar.SelectedTab == _authorTab)
 				{
 				   
-					_textView.Text = "Search By Author";
+					_textView.Text = "Search by Author";
 					var layout = (LinearLayout)FindViewById(Resource.Id.LinearLayout1);
 					layout.SetBackgroundColor(Color.White);
 					var imageView = (ImageView)FindViewById(Resource.Id.authorBackGroundImageView);
@@ -224,8 +208,8 @@ namespace quotation
 					_adapter.Clear();
 					foreach (var current in CategoryItemList.Where(q => q.CategoryName != null))
 						_adapter.Add(current);
-                    _progressDialog.Dismiss();
-                }
+					_progressDialog.Dismiss();
+				}
 			}
 			catch (Exception e)
 			{
@@ -255,38 +239,22 @@ namespace quotation
 			builder.Create().Show();
 		}
 
-        protected override void OnPause()
-        {
-            mAdView?.Pause();
-            base.OnPause();
-        }
+		protected override void OnPause()
+		{
+			mAdView?.Pause();
+			base.OnPause();
+		}
 
-        protected override void OnResume()
-        {
-            base.OnResume();
-            mAdView?.Resume();
-        }
+		protected override void OnResume()
+		{
+			base.OnResume();
+			mAdView?.Resume();
+		}
 
-        protected override void OnDestroy()
-        {
-            mAdView?.Destroy();
-            base.OnDestroy();
-        }
-
-        //private static string CreateDatabase(string path)
-        //{
-        //    try
-        //    {
-        //        var connection = new SQLiteAsyncConnection(path);
-        //        {
-        //            connection.CreateTableAsync<CategoryItem>();
-        //            return "Database created";
-        //        }
-        //    }
-        //    catch (SQLiteException ex)
-        //    {
-        //        return ex.Message;
-        //    }
-        //}
-    }
+		protected override void OnDestroy()
+		{
+			mAdView?.Destroy();
+			base.OnDestroy();
+		}
+	}
 }

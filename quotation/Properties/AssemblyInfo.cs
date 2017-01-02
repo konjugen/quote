@@ -26,6 +26,7 @@ using Android.App;
 [assembly: Permission(Name = Android.Manifest.Permission.Internet)]
 [assembly: Permission(Name = Android.Manifest.Permission.WriteExternalStorage)]
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
+[assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
 //[assembly: Application(Theme = "@android:style/Theme.Material.Light")]
